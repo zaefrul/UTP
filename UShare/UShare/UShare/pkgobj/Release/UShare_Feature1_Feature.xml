@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="f523e100-ecf3-4709-a23c-8f415871ab9f" Scope="Site" Title="UShare Feature1">
+  <ElementManifests>
+    <ElementManifest Location="HeaderNavigation\Elements.xml" />
+    <ElementFile Location="HeaderNavigation\HeaderNavigation.webpart" />
+    <ElementManifest Location="UpcomingEvents\Elements.xml" />
+    <ElementFile Location="UpcomingEvents\UpcomingEvents.webpart" />
+    <ElementManifest Location="UpcomingEventsList\Elements.xml" />
+    <ElementFile Location="UpcomingEventsList\UpcomingEventsList.webpart" />
+    <ElementManifest Location="QuickLinks\Elements.xml" />
+    <ElementFile Location="QuickLinks\QuickLinks.webpart" />
+    <ElementManifest Location="MegaDropdown\Elements.xml" />
+    <ElementFile Location="MegaDropdown\MegaDropdown.webpart" />
+    <ElementManifest Location="Announcement\Elements.xml" />
+    <ElementFile Location="Announcement\Announcement.webpart" />
+    <ElementManifest Location="HRmatters\Elements.xml" />
+    <ElementFile Location="HRmatters\HRmatters.webpart" />
+    <ElementManifest Location="HSEnv\Elements.xml" />
+    <ElementFile Location="HSEnv\HSEnv.webpart" />
+  </ElementManifests>
+</Feature>

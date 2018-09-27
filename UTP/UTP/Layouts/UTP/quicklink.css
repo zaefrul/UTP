@@ -1,0 +1,43 @@
+/******Column Quick Link*******/
+
+.col-link {
+    position: relative;
+    background: #324773;
+    display: table;
+    width: calc(100% - 90px);
+    padding: 30px 45px;
+}
+
+.col-link .link-content {
+    display: table;
+}
+
+section.sec-one, section.sec-two, section.sec-three, section.sec-four {
+    float: left;
+    margin: 0 15px;
+}
+
+.link-category {
+    color: #bc65b5;
+    text-transform: uppercase;
+    font-size: 1.2em;
+	font-family: 'Cocogoose', Arial, sans-serif;
+}
+
+.col-link .link-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.col-link .link-content li {
+}
+
+.col-link .link-content li a {
+    color: #7e91b2;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.3em;
+}
+/******Column Quick Link End*******/

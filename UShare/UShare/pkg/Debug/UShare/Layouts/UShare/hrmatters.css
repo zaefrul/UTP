@@ -1,0 +1,314 @@
+﻿@charset "utf-8";
+
+/******Section Events Start******/
+section.sec-hrmatters {
+    display: table;
+    padding: 20px;
+    background: #ffffff;
+    position: absolute;
+    height: 100%;
+}
+
+section.sec-hrmatters-title {
+    width: 100%;
+    text-align: center;
+    color: #626262;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'Cocogoose', Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+section.sec-hrmatters-row {
+    display: table;
+    width: 100%;
+    margin-bottom: 12px;
+    min-height: 60px;
+}
+
+section.sec-hrmatters-date {
+    color: #FF9800;
+    font-size: 1em;
+    font-family: "AvenirNextLTPro-Bold";
+    font-weight: bold;
+    width: 40px;
+    text-align: center;
+    padding-right: 5px;
+    float: left;
+    padding: 5px 0;
+    position: relative;
+}
+
+    section.sec-hrmatters-date::after {
+        content: "";
+        height: 30px;
+        width: 3px;
+        background: #626262;
+        position: absolute;
+        right: -5px;
+        top: 5px;
+    }
+
+    section.sec-hrmatters-date .day {
+        font-size: 1.2em;
+        line-height: 0.8em;
+    }
+
+    section.sec-hrmatters-date .month {
+        font-size: 0.8em;
+    }
+
+section.sec-hrmatters-name {
+    float: left;
+    font-size: 0.9em;
+    width: calc(100% - 75px);
+    padding-left: 15px;
+}
+
+    section.sec-hrmatters-name a {
+        color: #626262;
+        text-decoration: none;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+        section.sec-hrmatters-name a:hover {
+            color: #cacaca;
+        }
+
+section.sec-hrmatters-more {
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    position: inherit;
+    left: 0;
+}
+
+section.sec-hrmatters-btn {
+    font-size: 0.9em;
+    padding: 10px 15px;
+    text-align: center;
+    color: #FF9800;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.2s;
+    width: calc(100% - 30px);
+}
+
+    section.sec-hrmatters-btn:hover {
+        font-weight: bold;
+    }
+
+
+/******Section Events List Start******/
+section.sec-hrmatters-list {
+    display: table;
+    padding: 40px;
+    background: #ffffff;
+    height: 100%;
+}
+
+section.sec-hrmatters-list-title {
+    width: 100%;
+    text-align: center;
+    color: #626262;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: 'Lulo', Arial, sans-serif;
+    margin-bottom: 35px;
+}
+
+section.sec-hrmatters-list-row {
+    display: table;
+    width: calc(33.3% - 10px);
+    margin-bottom: 12px;
+    float: left;
+    padding: 25px;
+    border: 1px solid #f3f3f3;
+    margin: 5px;
+    min-height: 160px;
+}
+
+section.sec-hrmatters-list-date {
+    font-size: 1em;
+    font-family: "Circular";
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+    float: left;
+    position: relative;
+    background: #f6f7f9;
+    padding-bottom: 5px;
+}
+
+
+    section.sec-hrmatters-list-date .day {
+        font-size: 1.5em;
+        padding: 5px;
+        line-height: 0.8em;
+        margin-top: 5px;
+    }
+
+    section.sec-hrmatters-list-date .month {
+        font-size: 1em;
+        background: #4caf50;
+        padding: 2px;
+        color: white;
+    }
+
+section.sec-hrmatters-list-name {
+    float: left;
+    font-size: 1em;
+    width: calc(100% - 80px);
+    padding-left: 20px;
+}
+
+    section.sec-hrmatters-list-name a {
+        color: #626262;
+        text-decoration: none;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
+        section.sec-hrmatters-list-name a:hover {
+            color: #cacaca;
+        }
+
+section.sec-hrmatters-list-paginated {
+    display: table;
+    width: 100%;
+    padding-top: 15px;
+}
+
+section.sec-hrmatters-list-paginated-content {
+    display: table;
+    margin: auto;
+}
+
+.paginated-no {
+    float: left;
+    margin: 5px;
+}
+
+/******Section Events Detail Start******/
+section.sec-hrmatters-detail {
+    display: table;
+    padding: 40px;
+    background: #ffffff;
+    height: 100%;
+}
+
+section.sec-hrmatters-detail-title {
+    width: 100%;
+    text-align: center;
+    color: #626262;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: 'Lulo', Arial, sans-serif;
+    margin-bottom: 35px;
+}
+
+section.sec-hrmatters-detail-row {
+    display: table;
+    width: calc(100% - 80px);
+    margin-bottom: 12px;
+    float: left;
+    padding: 40px;
+    border: 1px solid #f3f3f3;
+    margin: 5px;
+    min-height: 160px;
+}
+
+section.sec-hrmatters-detail-date {
+    font-size: 1em;
+    font-family: "Circular";
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+    float: left;
+    position: relative;
+    background: #f6f7f9;
+    padding-bottom: 5px;
+}
+
+
+    section.sec-hrmatters-detail-date .day {
+        font-size: 3em;
+        padding: 5px;
+        line-height: 0.8em;
+        margin-top: 5px;
+    }
+
+    section.sec-hrmatters-detail-date .month {
+        font-size: 1.8em;
+        background: #4caf50;
+        padding: 2px;
+        color: white;
+    }
+
+    section.sec-hrmatters-detail-date .year {
+        font-size: 1.5em;
+    }
+
+section.sec-hrmatters-detail-name {
+    margin-left: 100px;
+    font-size: 25px;
+    width: calc(100% - 140px);
+    padding-left: 40px;
+    font-weight: bold;
+}
+
+    section.sec-hrmatters-detail-name a {
+        color: #626262;
+        text-decoration: none;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
+section.sec-hrmatters-detail-Author {
+    font-size: 0.85em;
+    width: calc(100% - 140px);
+    padding: 15px 40px;
+    color: #d4d4d4;
+    margin-left: 100px;
+}
+
+section.sec-hrmatters-detail-body {
+    margin-left: 100px;
+    font-size: 1em;
+    width: calc(100% - 140px);
+    padding: 10px 40px;
+}
+
+section.sec-hrmatters-detail-more {
+    display: table;
+    width: 100%;
+    padding: 20px;
+}
+
+
+    section.sec-hrmatters-detail-more a {
+        text-decoration: none;
+    }
+
+section.sec-hrmatters-detail-btn:hover {
+    background: #848484;
+}
+
+section.sec-hrmatters-detail-btn {
+    background: #d4d4d4;
+    padding: 10px;
+    display: table;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}

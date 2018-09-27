@@ -1,0 +1,305 @@
+﻿@charset "utf-8";
+
+/******Section Events Start******/
+section.sec-event {
+    display: table;
+    width: calc(100% - 100px);
+    padding: 30px 0;
+    padding-left: 100px;
+    background: linear-gradient(0deg, #1d2942, #4a6192);
+}
+
+section.sec-event-title {
+    width: 100%;
+    text-align: center;
+    color: #ff9800;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Cocogoose', Arial, sans-serif;
+}
+
+section.sec-event-subTitle {
+    width: calc(100% - 100px);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px #7b7b7b;
+    font-size: 1.2em;
+    padding: 10px 50px;
+    margin-top: -30px;
+}
+
+section.sec-event-row {
+    display: table;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+section.sec-event-date {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-family: "AvenirNextLTPro-Bold";
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+    padding-right: 5px;
+    float: left;
+    padding: 10px 5px;
+    background: #ff9800;
+    position: relative;
+}
+
+    section.sec-event-date::after {
+        content: "";
+        height: 13px;
+        width: 13px;
+        background: #ff9800;
+        position: absolute;
+        right: -6px;
+        top: 22px;
+        transform: rotate(44deg);
+    }
+
+    section.sec-event-date .day {
+        font-size: 1.2em;
+        line-height: 0.8em;
+    }
+
+    section.sec-event-date .month {
+        font-size: 0.8em;
+    }
+
+section.sec-event-name {
+    float: left;
+    font-size: 1em;
+    width: calc(100% - 100px);
+    padding: 0 15px;
+}
+
+    section.sec-event-name a {
+        color: white;
+        text-decoration: none;
+    }
+
+        section.sec-event-name a:hover {
+            color: #cacaca;
+        }
+
+section.sec-event-more {
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    position: inherit;
+    left: 0;
+}
+
+section.sec-event-btn {
+    background: #ff9800;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.2s;
+    font-family: "AvenirNextLTPro-Bold";
+    width: calc(100% - 30px);
+}
+
+    section.sec-event-btn:hover {
+        background: black;
+        color: white;
+    }
+
+/***********Event listing**********/
+
+/******Section Events Start******/
+section.sec-event-listing {
+    display: table;
+    width: 100%;
+    position: relative;
+    padding-bottom: 55px;
+}
+
+section.sec-event-listing-title {
+    width: 100%;
+    text-align: center;
+    color: #ff9800;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Cocogoose', Arial, sans-serif;
+}
+
+section.sec-event-listing-subTitle {
+    width: calc(100% - 100px);
+    text-align: center;
+    color: #3e3e3e;
+    font-size: 1.2em;
+    padding: 10px 50px;
+    margin-top: -30px;
+}
+
+section.sec-event-listing-row {
+    display: table;
+    width: calc(25% - 22px);
+    margin-bottom: 15px;
+    background: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    margin: 10px;
+    position: relative;
+    float: left;
+    min-height: 250px;
+}
+
+section.sec-event-listing-date {
+    color: #8096c3;
+    font-size: 1.5em;
+    font-family: "AvenirNextLTPro-Bold";
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.event-date-ico {
+    position: absolute;
+    left: 10px;
+    color: #b3ccc9;
+}
+
+/*section.sec-event-listing-date::after {
+    content: "";
+    height: 13px;
+    width: 13px;
+    background: #ff9800;
+    position: absolute;
+    right: -6px;
+    top: 22px;
+    transform: rotate(44deg);
+}*/
+
+section.sec-event-listing-date .day {
+    font-size: 1.2em;
+    line-height: 0.8em;
+}
+
+section.sec-event-listing-date .month {
+    font-size: 0.8em;
+}
+
+section.sec-event-listing-name {
+    font-size: 1em;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+    section.sec-event-listing-name a {
+        color: #3e3e3e;
+        text-decoration: none;
+    }
+
+        section.sec-event-listing-name a:hover {
+            color: #cacaca;
+        }
+
+section.sec-event-listing-summary {
+    color: #a7a7a7;
+    text-decoration: none;
+    padding: 15px;
+}
+
+
+section.sec-event-listing-btn {
+    background: #ff9800;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.2s;
+    font-family: "AvenirNextLTPro-Bold";
+}
+
+    section.sec-event-listing-btn:hover {
+        background: black;
+        color: white;
+    }
+
+section.sec-event-listing-paginated {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+section.sec-event-listing-paginated-column {
+    display: table;
+    margin: auto;
+}
+
+section.sec-event-listing-paginated-btn {
+    background: #fdfdfd;
+    padding: 5px;
+    float: left;
+    margin: 3px;
+    width: 20px;
+    min-height: 20px;
+    text-align: center;
+    border: 1px solid #ececec;
+    transition-duration: 0.2s;
+}
+
+
+    section.sec-event-listing-paginated-btn:hover {
+        background: #eaeaea;
+    }
+
+    section.sec-event-listing-paginated-btn:active {
+        background: #eaeaea;
+    }
+
+section.sec-event-listing-paginated-column a {
+    color: #424242;
+}
+
+section.sec-event-listing-popup {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+section.sec-event-listing-popup-content {
+    background: white;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10%;
+    position: relative;
+}
+
+section.sec-event-popup-btn-close a {
+    color: #dedede;
+}
+
+    section.sec-event-popup-btn-close a:hover {
+        color: #F44336;
+    }
+
+section.sec-event-popup-btn-close {
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    z-index: 1;
+}

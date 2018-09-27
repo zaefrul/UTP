@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="657a68f9-35d0-4ab4-89e4-6dea142f10fa" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="UShare.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.HeaderNavigation" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.UpcomingEvents" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.UpcomingEventsList" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.QuickLinks" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.MegaDropdown" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.Announcement" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.HRmatters" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.HSEnv" TypeName="*" />
+        <SafeControl Assembly="UShare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2bf31f783bf15e2d" Namespace="UShare.AnnouncementLists" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="UShare_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

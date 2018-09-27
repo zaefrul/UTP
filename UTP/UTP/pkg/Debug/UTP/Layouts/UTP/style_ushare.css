@@ -1,0 +1,448 @@
+@charset "utf-8";
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	perspective: 1px;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+    font-family: 'AvenirNextLTPro-Regular', Arial, sans-serif;
+}	
+	
+/******Font Color List Start******/
+.clr-white { color: #fff;}
+.clr-pink { color: #bc65b5;}
+.clr-green { color: #50bdc7;}
+.clr-red { color: #8b0000;}
+.clr-yellow { color: #fcb80d;}
+.clr-mildGreen { color: #97bf19;}
+.clr-fbBlue { color: #4c68a8;}
+.clr-skyBlue { color: #d7deef;}
+.clr-purple { color: #bc65b5;}
+/******Font Color List End******/
+
+/******BG Color List Start******/
+.bg-pink { background-color: #bc65b5;}
+.bg-green { background-color: #50bdc7;}
+.bg-red { background-color: #8b0000;}
+.bg-yellow { background-color: #fcb80d;}
+.bg-mildGreen { background-color: #97bf19;}
+.bg-fbBlue { background-color: #4c68a8;}
+.bg-DarkBlue { background-color: #324773;}
+.bg-purple { background-color: #bc65b5;}
+/******Font Color List End******/
+
+/******Fonts start******/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+@font-face {font-family:"Cocogoose";src:url("fonts/Cocogoose Pro Regular Trial.ttf");}
+@font-face {font-family:"Octagen";src:url("fonts/octagen-roman-ffp.ttf");}
+@font-face{font-family:"AvenirNextLTPro-Bold";src:url("fonts/AvenirNextLTPro-Bold.woff") format("woff");}
+@font-face{font-family:"AvenirNextLTPro-Regular";src:url("fonts/AvenirNextLTPro-Regular.woff") format("woff");}
+.font-cocogoose{font-family:'Cocogoose'}
+.font-octagen-bold{font-family:'Octagen'}
+.font-avenir-bold{font-family:'AvenirNextLTPro-Bold'}
+.font-avenir{font-family:'AvenirNextLTPro-Regular'}
+
+/******Fonts end******/
+header {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: relative;
+    width: 100%;
+}
+
+section.top {
+    background-color: #626262;
+    padding: 10px 0;
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+section.top-container {
+    height: 100%;
+    width: 1024px;
+    margin: auto;
+    position: relative;
+    display: table;
+}
+
+.userLogin {
+    float: right;
+    font-size: 0.8em;
+}
+
+section.top a {
+    color: white;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-style: normal;
+}
+
+section.bottom {
+    height: 100px;
+    background: white;
+    box-shadow: 0 0 20px #40404026;
+}
+
+section.btm-container {
+    height: 100%;
+    width: 1024px;
+    margin: auto;
+    position: relative;
+}
+
+.btn-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: calc(100px - 20px);
+    padding: 10px 0;
+}
+
+.btm-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    height: 100%;
+}
+
+.toplink ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.toplink li {
+    float: left;
+}
+
+.toplink li a {
+    display: table-cell;
+    padding: 0 15px;
+    background-color: transparent;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #626262;
+    height: 50px;
+    font-size: 13.824px;
+    font-family: "AvenirNextLTPro-Bold";
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+}
+
+.toplink li a:hover {
+	color: white;
+    background: #101010;
+}
+
+.search {
+    display: table;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+button.btn-search {
+    background: #0c67ad;
+    border: none;
+    color: white;
+    padding: 10px;
+    float: left;
+}
+
+input#wsearch {
+    padding: 9px 10px;
+    float: left;
+    border: 1px solid #e2e2e2;
+}
+
+/******Column Mega Dropdown*******/
+
+.col-megaNav {
+    background: rgb(249, 249, 249);
+    min-height: 400px;
+    padding: 30px 40px;
+    z-index: 1;
+    width: calc(100% - 80px);
+    display: none;
+    position: relative;
+}
+
+section.col-megaNav-content {
+    display: table;
+    width: 100%;
+    height: 400px;
+    position: inherit;
+}
+
+section.mega-sec-one {
+    position: absolute;
+    left: 0;
+    display: table;
+    height: 100%;
+    width: calc(25% - 40px);
+    padding: 0 20px;
+    border-right: 2px dotted #e4e4e4;
+}
+
+section.mega-sec-two {
+    position: absolute;
+    left: 25%;
+    display: table;
+    height: 100%;
+    width: calc(25% - 40px);
+    padding: 0 20px;
+    border-right: 2px dotted #e4e4e4;
+}
+
+section.mega-sec-three {
+    position: absolute;
+    left: 50%;
+    display: table;
+    height: 100%;
+    width: calc(25% - 40px);
+    padding: 0 20px;
+    /*border-right: 2px dotted #e4e4e4;*/
+}
+
+.col-megaNav section.mega-content {
+    padding-left: 15px;
+}
+
+.col-megaNav .mega-content .mega-category {
+    color: #4bd1a0;
+    text-transform: uppercase;
+    font-size: 1em;
+	font-family: 'AvenirNextLTPro-Bold', Arial, sans-serif;
+	margin-bottom: 15px;
+}
+
+.col-megaNav .mega-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.col-megaNav .mega-content li {
+}
+
+.col-megaNav .mega-content li a {
+    color: #7e91b2;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.6em;
+    transition-duration: 0.2s;
+}
+
+.col-megaNav .mega-content li a:hover {
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+/******Column Mega Dropdown End*******/
+
+.zone-1 {
+    height: 450px;
+    width: 100%;
+    display: table;
+    position: relative;
+    background: #f4f5f5;
+}
+
+section.zone-1-container {
+    height: 100%;
+    width: 1024px;
+    margin: auto;
+    position: relative;
+    display: table;
+}
+
+section.zone-1-right {
+    float: left;
+    width: 35%;
+    display: table;
+    position: relative;
+    height: 450px;
+}
+
+section.zone-1-left {
+    float: left;
+    width: 65%;
+    display: table;
+    position: relative;
+    height: 450px;
+}
+
+.zone-2 {
+    height: 450px;
+    width: 100%;
+    display: table;
+    position: relative;
+    background: #e2e2e2;
+}
+
+section.zone-2-container {
+    height: 100%;
+    width: 1024px;
+    margin: auto;
+    position: relative;
+    display: table;
+}
+
+section.zone-2-right {
+    float: left;
+    width: 50%;
+    display: table;
+    position: relative;
+    height: 450px;
+}
+
+section.zone-2-left {
+    float: left;
+    width: 50%;
+    display: table;
+    position: relative;
+    height: 450px;
+}
+
+.zone-3 {
+    height: 450px;
+    width: 100%;
+    display: table;
+    position: relative;
+    background: #fff;
+}
+
+section.zone-3-container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: table;
+}
+
+section.zone-3-content {
+    float: left;
+    width: 100%;
+    display: table;
+    position: relative;
+    height: 450px;
+}
+
+
+
+.zone-footer {
+    width: 100%;
+    display: table;
+    position: relative;
+    background: #fff;
+}
+
+section.zone-footer-container {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: table;
+}
+
+section.zone-footer-content {
+    float: left;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+.col-link {
+    position: relative;
+    background: #006990;
+    display: table;
+    width: calc(100% - 90px);
+    padding: 30px 45px;
+}
+
+.link-content {
+	margin-bottom: 15px;
+}
+
+section.sec-one, section.sec-two, section.sec-three, section.sec-four , section.sec-five {
+    float: left;
+    margin: 0 10px;
+    width: calc(20% - 20px);
+}
+
+.link-category {
+    color: #4bd1a0;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-family: 'AvenirNextLTPro-Bold', Arial, sans-serif;
+    position: relative;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+}
+
+.link-category::after {
+    content: "";
+    background: white;
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.col-link .link-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.col-link .link-content li {
+}
+
+.col-link .link-content li a {
+    color: #b9d8e6;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.3em;
+}
+
+.link-content .link-btn {
+    background: #ff9800;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.link-content a {
+	color: white;
+	text-decoration: none;
+}
+
+.link-content .link-btn:hover {
+    background: #1e2f52;
+}
+
+
+.col-footer {
+    background: #626262;
+}
+
+.col-footer-text {
+    padding: 10px;
+    text-align: center;
+}

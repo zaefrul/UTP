@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="3c06fb5e-56c9-41dd-8b9c-df79a2d481f1" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="UTP.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.MegaDropdown" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.StaticBanner" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.AudiencePathway" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.UpcomingEvents" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.UpcomingEventsList" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.QuickLinks" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.GetConnected" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.TheLatest" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.QuickLinkButton" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.TheLatestList" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.TheLatestDetails" TypeName="*" />
+        <SafeControl Assembly="UTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c26a51135984198a" Namespace="UTP.UpcomingEventsDetail" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\UTP\event.css" />
+    <TemplateFile Location="Layouts\UTP\mega.css" />
+    <TemplateFile Location="Layouts\UTP\news.css" />
+    <TemplateFile Location="Layouts\UTP\quicklink.css" />
+    <TemplateFile Location="Layouts\UTP\style_ushare.css" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="UTP_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

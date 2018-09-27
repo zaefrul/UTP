@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="f523e100-ecf3-4709-a23c-8f415871ab9f" Scope="Site" Title="UShare Feature1">
+  <ElementManifests>
+    <ElementManifest Location="HeaderNavigation\Elements.xml" />
+    <ElementFile Location="HeaderNavigation\HeaderNavigation.webpart" />
+    <ElementManifest Location="UpcomingEvents\Elements.xml" />
+    <ElementFile Location="UpcomingEvents\UpcomingEvents.webpart" />
+    <ElementManifest Location="QuickLinks\Elements.xml" />
+    <ElementFile Location="QuickLinks\QuickLinks.webpart" />
+    <ElementManifest Location="MegaDropdown\Elements.xml" />
+    <ElementFile Location="MegaDropdown\MegaDropdown.webpart" />
+    <ElementManifest Location="Announcement\Elements.xml" />
+    <ElementFile Location="Announcement\Announcement.webpart" />
+    <ElementManifest Location="HRmatters\Elements.xml" />
+    <ElementFile Location="HRmatters\HRmatters.webpart" />
+    <ElementManifest Location="HSEnv\Elements.xml" />
+    <ElementFile Location="HSEnv\HSEnv.webpart" />
+    <ElementManifest Location="AnnouncementLists\Elements.xml" />
+    <ElementFile Location="AnnouncementLists\AnnouncementLists.webpart" />
+    <ElementManifest Location="AnnouncementDetail\Elements.xml" />
+    <ElementFile Location="AnnouncementDetail\AnnouncementDetail.webpart" />
+    <ElementManifest Location="UpcommingEventsLists\Elements.xml" />
+    <ElementFile Location="UpcommingEventsLists\UpcommingEventsLists.webpart" />
+    <ElementManifest Location="HRMattersList\Elements.xml" />
+    <ElementFile Location="HRMattersList\HRMattersList.webpart" />
+    <ElementManifest Location="HRMattersDetail\Elements.xml" />
+    <ElementFile Location="HRMattersDetail\HRMattersDetail.webpart" />
+    <ElementManifest Location="HSEnvDetail\Elements.xml" />
+    <ElementFile Location="HSEnvDetail\HSEnvDetail.webpart" />
+    <ElementManifest Location="HSEnvLists\Elements.xml" />
+    <ElementFile Location="HSEnvLists\HSEnvLists.webpart" />
+    <ElementManifest Location="Slider\Elements.xml" />
+    <ElementFile Location="Slider\Slider.webpart" />
+  </ElementManifests>
+</Feature>

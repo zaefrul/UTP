@@ -1,0 +1,37 @@
+/******Column Mega Dropdown*******/
+section.mega-sec-one, section.mega-sec-two, section.mega-sec-three, section.mega-sec-four {
+    float: left;
+    margin: 30px;
+    height: 100%;
+}
+
+.col-megaNav section.mega-content {
+    margin-bottom: 30px;
+    border-left: 2px solid #5c5e86;
+    padding-left: 15px;
+}
+
+.col-megaNav .mega-content .mega-category {
+    color: #bc65b5;
+    text-transform: uppercase;
+    font-size: 1.2em;
+	font-family: 'Cocogoose', Arial, sans-serif;
+}
+
+.col-megaNav .mega-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.col-megaNav .mega-content li {
+}
+
+.col-megaNav .mega-content li a {
+    color: #7e91b2;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.3em;
+}
+/******Column Mega Dropdown End*******/

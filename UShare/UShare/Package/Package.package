@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="657a68f9-35d0-4ab4-89e4-6dea142f10fa" solutionId="657a68f9-35d0-4ab4-89e4-6dea142f10fa" resetWebServer="false" sharePointProductVersion="15.0" name="UShare" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="5b107eaa-6fc6-40c8-b0ad-b7953a50c3a7" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="9eb26b27-584f-49cb-b526-f2d120e9fbc7" />
+  </projectItems>
+</package>

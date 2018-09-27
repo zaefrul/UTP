@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="1d364955-ca08-4dca-aaf1-5ba6174e1ceb" Scope="Site" Title="UTP Feature1">
+  <ElementManifests>
+    <ElementManifest Location="MegaDropdown\Elements.xml" />
+    <ElementFile Location="MegaDropdown\MegaDropdown.webpart" />
+    <ElementManifest Location="StaticBanner\Elements.xml" />
+    <ElementFile Location="StaticBanner\StaticBanner.webpart" />
+    <ElementManifest Location="AudiencePathway\Elements.xml" />
+    <ElementFile Location="AudiencePathway\AudiencePathway.webpart" />
+    <ElementManifest Location="UpcomingEvents\Elements.xml" />
+    <ElementFile Location="UpcomingEvents\UpcomingEvents.webpart" />
+    <ElementManifest Location="UpcomingEventsList\Elements.xml" />
+    <ElementFile Location="UpcomingEventsList\UpcomingEventsList.webpart" />
+    <ElementManifest Location="QuickLinks\Elements.xml" />
+    <ElementFile Location="QuickLinks\QuickLinks.webpart" />
+    <ElementManifest Location="GetConnected\Elements.xml" />
+    <ElementFile Location="GetConnected\GetConnected.webpart" />
+    <ElementManifest Location="TheLatest\Elements.xml" />
+    <ElementFile Location="TheLatest\TheLatest.webpart" />
+    <ElementManifest Location="QuickLinkButton\Elements.xml" />
+    <ElementFile Location="QuickLinkButton\QuickLinkButton.webpart" />
+    <ElementManifest Location="TheLatestList\Elements.xml" />
+    <ElementFile Location="TheLatestList\TheLatestList.webpart" />
+    <ElementManifest Location="TheLatestDetails\Elements.xml" />
+    <ElementFile Location="TheLatestDetails\TheLatestDetails.webpart" />
+    <ElementManifest Location="UpcomingEventsDetail\Elements.xml" />
+    <ElementFile Location="UpcomingEventsDetail\UpcomingEventsDetail.webpart" />
+  </ElementManifests>
+</Feature>

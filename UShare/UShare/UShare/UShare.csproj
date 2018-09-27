@@ -1,0 +1,228 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EF6B5DE-C161-40BF-868C-78B8E431233F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UShare</RootNamespace>
+    <AssemblyName>UShare</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announcement\Announcement.ascx.cs">
+      <DependentUpon>Announcement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Announcement\Announcement.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Announcement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderNavigation\HeaderNavigation.ascx.cs">
+      <DependentUpon>HeaderNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderNavigation\HeaderNavigation.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeaderNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="HRmatters\HRmatters.ascx.cs">
+      <DependentUpon>HRmatters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HRmatters\HRmatters.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRmatters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HSEnv\HSEnv.ascx.cs">
+      <DependentUpon>HSEnv.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HSEnv\HSEnv.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HSEnv.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MegaDropdown\MegaDropdown.ascx.cs">
+      <DependentUpon>MegaDropdown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MegaDropdown\MegaDropdown.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MegaDropdown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickLinks\QuickLinks.ascx.cs">
+      <DependentUpon>QuickLinks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuickLinks\QuickLinks.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuickLinks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpcomingEventsList\UpcomingEventsList.ascx.cs">
+      <DependentUpon>UpcomingEventsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpcomingEventsList\UpcomingEventsList.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpcomingEventsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpcomingEvents\UpcomingEvents.ascx.cs">
+      <DependentUpon>UpcomingEvents.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpcomingEvents\UpcomingEvents.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpcomingEvents.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Announcement\Announcement.webpart" />
+    <None Include="Announcement\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ff3c064d-1b08-4b3f-9163-b08e0dbb84cb}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{5b107eaa-6fc6-40c8-b0ad-b7953a50c3a7}</FeatureId>
+    </None>
+    <None Include="HeaderNavigation\HeaderNavigation.webpart" />
+    <None Include="HeaderNavigation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{464de2f9-0911-407b-b622-fb4c6d7ba736}</SharePointProjectItemId>
+    </None>
+    <None Include="HRmatters\HRmatters.webpart" />
+    <None Include="HRmatters\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c87cffae-42c6-4903-9388-33755568f0ea}</SharePointProjectItemId>
+    </None>
+    <None Include="HSEnv\HSEnv.webpart" />
+    <None Include="HSEnv\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{41ae61a3-d138-4282-a977-440b2760b9f8}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9eb26b27-584f-49cb-b526-f2d120e9fbc7}</SharePointProjectItemId>
+    </None>
+    <None Include="MegaDropdown\MegaDropdown.webpart" />
+    <None Include="MegaDropdown\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{341495ab-6997-405f-baa9-866912eba093}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{657a68f9-35d0-4ab4-89e4-6dea142f10fa}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="QuickLinks\QuickLinks.webpart" />
+    <None Include="QuickLinks\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5e81fcd7-3295-4150-8026-38805040e45c}</SharePointProjectItemId>
+    </None>
+    <None Include="UpcomingEventsList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d26cde9e-63aa-46dc-8d5e-3f3fde33664e}</SharePointProjectItemId>
+    </None>
+    <None Include="UpcomingEventsList\UpcomingEventsList.webpart" />
+    <None Include="UpcomingEvents\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4bae0324-88a1-4ac1-866d-e070411d4609}</SharePointProjectItemId>
+    </None>
+    <None Include="UpcomingEvents\UpcomingEvents.webpart" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Announcement\Announcement.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Announcement.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Announcement\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="HeaderNavigation\Elements.xml" />
+    <Content Include="HeaderNavigation\HeaderNavigation.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>HeaderNavigation.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="HRmatters\Elements.xml" />
+    <Content Include="HRmatters\HRmatters.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>HRmatters.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="HSEnv\Elements.xml" />
+    <Content Include="HSEnv\HSEnv.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>HSEnv.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Layouts\UShare\news.css" />
+    <Content Include="Layouts\UShare\quicklink.css" />
+    <Content Include="Layouts\UShare\event.css" />
+    <Content Include="Layouts\UShare\jquery_1_11_1.js" />
+    <Content Include="Layouts\UShare\style_ushare.css" />
+    <Content Include="MegaDropdown\Elements.xml" />
+    <Content Include="MegaDropdown\MegaDropdown.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MegaDropdown.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="QuickLinks\Elements.xml" />
+    <Content Include="QuickLinks\QuickLinks.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>QuickLinks.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="UpcomingEventsList\Elements.xml" />
+    <Content Include="UpcomingEventsList\UpcomingEventsList.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>UpcomingEventsList.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="UpcomingEvents\Elements.xml" />
+    <Content Include="UpcomingEvents\UpcomingEvents.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>UpcomingEvents.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
