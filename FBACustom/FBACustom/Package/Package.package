@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="46b3462e-9ef6-4c1a-a17d-2163d5abba6a" solutionId="46b3462e-9ef6-4c1a-a17d-2163d5abba6a" resetWebServer="false" sharePointProductVersion="15.0" name="FBACustom" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="d86338ff-fca6-4eb0-be02-eedca66ffdc0" />
+  </projectItems>
+</package>

@@ -1,0 +1,211 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9976C64F-00CF-453F-A535-E01AAE3F762A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FBACustom</RootNamespace>
+    <AssemblyName>FBACustom</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.IdentityModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Layouts\FBACustom\UShareLoginForm.aspx.cs">
+      <DependentUpon>UShareLoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\FBACustom\UShareLoginForm.aspx.designer.cs">
+      <DependentUpon>UShareLoginForm.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="Layouts\FBACustom\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <None Include="Layouts\FBACustom\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <None Include="Layouts\FBACustom\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <None Include="Layouts\FBACustom\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-Black.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-Bold.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-Italic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-Light.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-Medium.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-Regular.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-Thin.ttf" />
+    <None Include="Layouts\FBACustom\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-Black.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-Bold.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-Italic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-Light.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-LightItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-Medium.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-Regular.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-SemiBold.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-Thin.ttf" />
+    <None Include="Layouts\FBACustom\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <None Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d86338ff-fca6-4eb0-be02-eedca66ffdc0}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{46b3462e-9ef6-4c1a-a17d-2163d5abba6a}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layouts\FBACustom\css\main.css" />
+    <Content Include="Layouts\FBACustom\css\util.css" />
+    <Content Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Layouts\FBACustom\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Layouts\FBACustom\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Layouts\FBACustom\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Layouts\FBACustom\fonts\montserrat\OFL.txt" />
+    <Content Include="Layouts\FBACustom\images\bg-01.jpg" />
+    <Content Include="Layouts\FBACustom\images\icons\favicon.ico" />
+    <Content Include="Layouts\FBACustom\images\UshareLogin.jpg" />
+    <Content Include="Layouts\FBACustom\images\UTP-logo.png" />
+    <Content Include="Layouts\FBACustom\js\main.js" />
+    <Content Include="Layouts\FBACustom\UShareLoginForm.aspx" />
+    <Content Include="Layouts\FBACustom\vendor\animate\animate.css" />
+    <Content Include="Layouts\FBACustom\vendor\animsition\css\animsition.css" />
+    <Content Include="Layouts\FBACustom\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Layouts\FBACustom\vendor\animsition\js\animsition.js" />
+    <Content Include="Layouts\FBACustom\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\js\popper.js" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Layouts\FBACustom\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Layouts\FBACustom\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Layouts\FBACustom\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Layouts\FBACustom\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Layouts\FBACustom\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Layouts\FBACustom\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Layouts\FBACustom\vendor\daterangepicker\moment.js" />
+    <Content Include="Layouts\FBACustom\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Layouts\FBACustom\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Layouts\FBACustom\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Layouts\FBACustom\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Layouts\FBACustom\vendor\select2\select2.css" />
+    <Content Include="Layouts\FBACustom\vendor\select2\select2.js" />
+    <Content Include="Layouts\FBACustom\vendor\select2\select2.min.css" />
+    <Content Include="Layouts\FBACustom\vendor\select2\select2.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
