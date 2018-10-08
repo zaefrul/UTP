@@ -61,9 +61,8 @@ namespace UTP.AudiencePathway
                 foreach (SPListItem Item in sPListItem)
                 {
                     SPFieldUrlValue FieldURL = new SPFieldUrlValue(Item["URL"].ToString());
-
-                    stringBuilder.Append("<li><a href=\"" + FieldURL.Url + "\">" + FieldURL.Description+ "</a></li>");
-
+                    string target = Item["ExternalTab"].ToString() == "True" ? "target='_blank'" : "";
+                    stringBuilder.Append($"<li><a href=\"{FieldURL.Url}\" {target} >{FieldURL.Description}</a></li>");
                 }
                 stringBuilder.Append("</ul>");
                 AudiencePathaway.Text = stringBuilder.ToString();
