@@ -54,13 +54,13 @@ namespace UShare.HSEnvDetail
                     SectionImage.Style.Value = "background-image: url("+ ImageUrl + ")";
                     Date.Text = Expires.ToString("dd MMMM yyyy");
                     Title.InnerText = Item["Title"].ToString();
-                    Body.InnerText = Item["Body"].ToString();
+                    Body.Text = Item["Body"].ToString();
                     ListsURL.HRef = ListsPageUrl;
                 }
             }
             catch (Exception ex)
             {
-                Body.InnerText = ex.Message;
+                //Body.Text = ex.Message;
             }
         }
     }

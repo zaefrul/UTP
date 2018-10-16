@@ -51,9 +51,9 @@ namespace UTP.UpcomingEventsDetail
                 ltrTitle.Text = PageTitle;
                 ltrName.Text = Item["Title"] != null ? Item["Title"].ToString() : "";
                 ltrLocation.Text = Item["Location"] != null ? Item["Location"].ToString() : "";
-                ltrDay.Text = Created.ToString("dd");
-                ltrMonth.Text = Created.ToString("MMM");
-                ltrTime.Text = Created.ToString("hh:mm tt");
+                ltrDay.Text = Expires.ToString("dd");
+                ltrMonth.Text = Expires.ToString("MMM");
+                ltrTime.Text = Expires.ToString("hh:mm tt");
                 ltrBody.Text = Item["Body"] != null ? Item["Body"].ToString() : "";
                 ltrMore.Text = "<a href='" + ListsPageUrl + "'><section class='sec-event-detail-btn'><i class='fas fa-arrow-left'></i> Back To Listing</section></a>";
             }

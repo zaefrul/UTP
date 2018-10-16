@@ -18,7 +18,7 @@ namespace UShare
         public static string UPBodyField { get { return "Description"; } }
 
         //The Latest
-        public static string TLQuery { get { string today = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now); return $"<Where><Geq><FieldRef Name='Expires' /><Value IncludeTimeValue='TRUE' Type='DateTime'>{today}</Value></Geq></Where><OrderBy><FieldRef Name='Expires' Ascending='True' /></OrderBy>"; } }
+        public static string TLQuery { get { /*string today = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now);*/ return $"<OrderBy><FieldRef Name='Created' Ascending='True' /></OrderBy>"; } }
         public static string TLTitleField { get { return "Title"; } }
         public static string TLPictureField { get { return "Picture"; } }
 

@@ -261,6 +261,7 @@ C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\bin\Debug\ko\System.Spatial.reso
 C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\bin\Debug\ru\System.Spatial.resources.dll
 C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\bin\Debug\zh-Hans\System.Spatial.resources.dll
 C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\obj\Debug\UTP.csprojAssemblyReference.cache
 C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\obj\Debug\UTP.csproj.CoreCompileInputs.cache
 C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\obj\Debug\UTP.csproj.CopyComplete
 C:\Users\sql_admin\Documents\GitHub\UTP\UTP\UTP\obj\Debug\UTP.dll

@@ -52,7 +52,7 @@ namespace UShare.HRmatters
                 foreach (SPListItem Item in sPListItem)
                 {
                     stringBuilder.Append("<section class=\"sec-hrmatters-row\">");
-                    DateTime Expires = DateTime.Parse(Item["Expires"].ToString());
+                    DateTime Expires = DateTime.Parse(Item["Created"].ToString());
                     stringBuilder.Append($"<section class=\"sec-hrmatters-date\"><div class=\"day\">{Expires.ToString("dd")}</div><div class=\"month\">{Expires.ToString("MMM")}</div></section>");
                     stringBuilder.Append("<section class=\"sec-hrmatters-name\">");
                     stringBuilder.Append($"<a href='{string.Format("{0}?hrid={1}", DetailURL, Item.ID)}' class=''>{Item["Title"].ToString()}</a>");

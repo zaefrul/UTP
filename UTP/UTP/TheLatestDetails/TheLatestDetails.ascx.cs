@@ -57,7 +57,7 @@ namespace UTP.TheLatestDetails
                         ltrName.Text = Item["Title"] != null ? Item["Title"].ToString() : "";
                         SPFieldUserValue author = new SPFieldUserValue(Web, Item["Author"].ToString());
                         //ltrAuthor.Text = author.User.Name;
-                        ltrDate.Text = Created.ToString("dd MMMM yyyy");
+                        ltrDate.Text = Expires.ToString("dd MMMM yyyy");
                         ltrBody.Text = Item["Body"] != null ? Item["Body"].ToString() : "";
                         ltrMore.Text = "<a href='" + ListsPageUrl + "'><section class='sec-news-detail-btn'><i class='fas fa-arrow-left'></i> Back To Listing</section></a>";
                     }

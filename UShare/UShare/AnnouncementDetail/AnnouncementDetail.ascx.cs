@@ -44,9 +44,9 @@ namespace UShare.AnnouncementDetail
                 SPListItem Item = Web.Lists[ListName].Items.GetItemById(ID);
                 DateTime Created = DateTime.Parse(Item["Created"].ToString());
                 DateTime Expires = DateTime.Parse(Item["Expires"].ToString());
-                Month.Text = Created.ToString("MMM");
-                Day.Text = Created.ToString("dd");
-                Year.Text = Created.ToString("yyyy");
+                Month.Text = Expires.ToString("MMM");
+                Day.Text = Expires.ToString("dd");
+                Year.Text = Expires.ToString("yyyy");
                 ATitle.Text = Item["Title"] != null ? Item["Title"].ToString() : "";
                 SPFieldUserValue author = new SPFieldUserValue(Web, Item["Author"].ToString());
                 CreatedBy.Text = author.User.Name;

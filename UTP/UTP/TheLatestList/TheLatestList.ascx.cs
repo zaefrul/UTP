@@ -51,7 +51,7 @@ namespace UTP.TheLatestList
                 string today = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now);
                 SPListItemCollection News = Web.Lists[ListName].GetItems(new SPQuery()
                 {
-                    Query = $"<Where><And><Geq><FieldRef Name='Expires' /><Value IncludeTimeValue='TRUE' Type='DateTime'>{today}</Value></Geq><Eq><FieldRef Name='Active' /><Value Type='Boolean'>1</Value></Eq></And></Where><OrderBy><FieldRef Name='Created' Ascending='Flase' /></OrderBy>",
+                    Query = $"<Where><Eq><FieldRef Name='Active' /><Value Type='Boolean'>1</Value></Eq></Where><OrderBy><FieldRef Name='Expires' Ascending='True' /></OrderBy>",
                     RowLimit = uint.Parse(RowLimit.ToString())
                 });
                 int index = 0;

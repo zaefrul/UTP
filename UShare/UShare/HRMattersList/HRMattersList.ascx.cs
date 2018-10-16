@@ -49,7 +49,7 @@ namespace UShare.HRMattersList
                 //    Query = "",
                 //    RowLimit = 9
                 //};
-                SPListItemCollection HRItems = Web.Lists[ListName].Items;
+                SPListItemCollection HRItems = Web.Lists[ListName].GetItems(Helper.TLQuery);
                 var Page = HttpContext.Current.Request.Params["page"];
                 StringBuilder sb = new StringBuilder();
                 int index = 0;

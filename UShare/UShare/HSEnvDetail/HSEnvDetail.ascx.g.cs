@@ -53,7 +53,7 @@ namespace UShare.HSEnvDetail {
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "15.0.0.0")]
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Body;
+        protected global::System.Web.UI.WebControls.Literal Body;
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "15.0.0.0")]
@@ -110,33 +110,11 @@ namespace UShare.HSEnvDetail {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "15.0.0.0")]
-        private global::System.Web.UI.HtmlControls.HtmlGenericControl @__BuildControlBody() {
-            global::System.Web.UI.HtmlControls.HtmlGenericControl @__ctrl;
-            @__ctrl = new global::System.Web.UI.HtmlControls.HtmlGenericControl("section");
+        private global::System.Web.UI.WebControls.Literal @__BuildControlBody() {
+            global::System.Web.UI.WebControls.Literal @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.Literal();
             this.Body = @__ctrl;
-            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("class", "sec-hse-detail-body");
             @__ctrl.ID = "Body";
-            System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " +
-                        "eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tem" +
-                        "por incididunt ut labore et dorem ipsum dolor sit amet, consectetur adipiscing e" +
-                        "lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do" +
-                        " eiusmod tempor incididunt ut labore et dolore magna aliqua</p>\r\n            <p>" +
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i" +
-                        "ncididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt u" +
-                        "t labore et dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius" +
-                        "mod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor " +
-                        "incididunt ut labore et dolore magna aliqua</p>\r\n            <p>Lorem ipsum dolo" +
-                        "r sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab" +
-                        "ore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dore" +
-                        "m ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid" +
-                        "idunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut la" +
-                        "bore et dolore magna aliqua</p>\r\n            <p>Lorem ipsum dolor sit amet, cons" +
-                        "ectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma" +
-                        "gna aliquait, sed do eiusmod tempor incididunt ut labore et dorem ipsum dolor si" +
-                        "t amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore " +
-                        "et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dolore m" +
-                        "agna aliqua</p>\r\n        "));
             return @__ctrl;
         }
         
@@ -175,11 +153,12 @@ namespace UShare.HSEnvDetail {
             global::System.Web.UI.HtmlControls.HtmlGenericControl @__ctrl3;
             @__ctrl3 = this.@__BuildControlTitle();
             @__parser.AddParsedSubObject(@__ctrl3);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        "));
-            global::System.Web.UI.HtmlControls.HtmlGenericControl @__ctrl4;
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        <section class=\"sec-hse-detail-body\">\r\n            "));
+            global::System.Web.UI.WebControls.Literal @__ctrl4;
             @__ctrl4 = this.@__BuildControlBody();
             @__parser.AddParsedSubObject(@__ctrl4);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n\r\n        <section class=\"sec-hse-detail-more\">\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </section>\r\n\r\n        <section class=\"sec-hse-detail-more\">\r\n          " +
+                        "  "));
             global::System.Web.UI.HtmlControls.HtmlAnchor @__ctrl5;
             @__ctrl5 = this.@__BuildControlListsURL();
             @__parser.AddParsedSubObject(@__ctrl5);

@@ -50,6 +50,7 @@ namespace UShare.HRMattersDetail
                     SPListItem Item = Web.Lists[ListName].GetItemById(ID);
                     DateTime Expires = DateTime.Parse(Item["Expires"].ToString());
                     DateTime Created = DateTime.Parse(Item["Created"].ToString());
+                    Title.Text = Item["Title"].ToString();
                     Month.Text = Expires.ToString("MMM");
                     Day.Text = Expires.ToString("dd");
                     Year.Text = Expires.ToString("yyyy");

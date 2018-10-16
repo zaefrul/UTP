@@ -15,11 +15,8 @@
         <section class="sec-hse-detail-name" runat="server" id="Title">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
         </section>
-        <section class="sec-hse-detail-body" runat="server" id="Body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquait, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <section class="sec-hse-detail-body">
+            <asp:Literal runat="server" ID="Body" ></asp:Literal>
         </section>
 
         <section class="sec-hse-detail-more">

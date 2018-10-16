@@ -41,7 +41,7 @@ namespace UShare.UpcommingEventsLists
                 string date = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now);
                 SPQuery Query = new SPQuery()
                 {
-                    Query = @"<Where><Geq><FieldRef Name='EventDate' /><Value IncludeTimeValue='TRUE' Type='DateTime'>"+ date + "</Value></Geq></Where>",
+                    Query = @"<Where><Geq><FieldRef Name='EventDate' /><Value IncludeTimeValue='TRUE' Type='DateTime'>"+ date + "</Value></Geq></Where><OrderBy><FieldRef Name='EventDate' Ascending='True' /></OrderBy>",
                     ViewFields = "<FieldRef Name='Title' /><FieldRef Name='EventDate' /><FieldRef Name='Description' /><FieldRef Name='Location' />",
                     RowLimit = RowLimit
                 };

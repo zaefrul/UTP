@@ -51,7 +51,8 @@ namespace UShare.HSEnvLists
                     index = (Int32.Parse(Page) - 1) * RowLimit;
                 }
                 int loopbreaker = index + RowLimit;
-                SPListItemCollection HSEItems = Web.Lists[ListName].Items;
+                string query = @"<OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>";
+                SPListItemCollection HSEItems = Web.Lists[ListName].GetItems(query);
                 for (int i = index; i < loopbreaker; i++)
                 {
                     if (i >= HSEItems.Count)
