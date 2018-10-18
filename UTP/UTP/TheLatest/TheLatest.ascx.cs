@@ -48,7 +48,7 @@ namespace UTP.TheLatest
                 ltrTitle.Text = PageTitle != null ? PageTitle : "";
                 ltrSubTitle.Text = PageSubTitle != null ? PageSubTitle : "";
                 string today = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now);
-                string q = $"<Where><And><Geq><FieldRef Name='Expires' /><Value IncludeTimeValue='TRUE' Type='DateTime'>{today}</Value></Geq><Eq><FieldRef Name='Active' /><Value Type='Boolean'>1</Value></Eq></And></Where><OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>";
+                string q = $"<Where><Eq><FieldRef Name='Active' /><Value Type='Boolean'>1</Value></Eq></Where><OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>";
                 //string query = @"<OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>";
                 SPWeb Web = new SPSite(SiteCollection).OpenWeb();
                 SPListItemCollection sPListItem = Web.Lists[ListName].GetItems(new SPQuery() { Query = q, RowLimit = uint.Parse(RowLimit.ToString()) });

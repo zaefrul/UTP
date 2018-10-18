@@ -46,14 +46,14 @@ namespace UTP.UpcomingEventsDetail
                 }
                 SPWeb Web = new SPSite(SiteCollection).OpenWeb();
                 SPListItem Item = Web.Lists[ListName].Items.GetItemById(ID);
-                DateTime Created = DateTime.Parse(Item["Created"].ToString());
+                DateTime EventDate = DateTime.Parse(Item["EventDate"].ToString());
                 DateTime Expires = DateTime.Parse(Item["Expires"].ToString());
                 ltrTitle.Text = PageTitle;
                 ltrName.Text = Item["Title"] != null ? Item["Title"].ToString() : "";
                 ltrLocation.Text = Item["Location"] != null ? Item["Location"].ToString() : "";
-                ltrDay.Text = Expires.ToString("dd");
-                ltrMonth.Text = Expires.ToString("MMM");
-                ltrTime.Text = Expires.ToString("hh:mm tt");
+                ltrDay.Text = EventDate.ToString("dd") + " ~ " + Expires.ToString("dd");
+                ltrMonth.Text = EventDate.ToString("MMM");
+                ltrTime.Text = EventDate.ToString("hh:mm tt");
                 ltrBody.Text = Item["Body"] != null ? Item["Body"].ToString() : "";
                 ltrMore.Text = "<a href='" + ListsPageUrl + "'><section class='sec-event-detail-btn'><i class='fas fa-arrow-left'></i> Back To Listing</section></a>";
             }

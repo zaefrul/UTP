@@ -39,7 +39,7 @@ namespace UTP.QuickLinks
             {
                 var q = new SPQuery()
                 {
-                    Query = @"<Where><Eq><FieldRef Name='Active' /><Value Type='Boolean'>1</Value></Eq></Where><OrderBy><FieldRef Name='Category_x003a_Sequence' Ascending='True' /><FieldRef Name='URL' Ascending='True' /></OrderBy>",
+                    Query = @"<Where><Eq><FieldRef Name='Active' /><Value Type='Boolean'>1</Value></Eq></Where><OrderBy><FieldRef Name='Category_x003a_Sequence' Ascending='True' /><FieldRef Name='Sequence' Ascending='True' /></OrderBy>",
                     ViewFields = @"  <FieldRef Name='URL' /><FieldRef Name='Comments' /><FieldRef Name='Category' /><FieldRef Name='Category_x003a_Section' />"
                 };
                 SPWeb Web = new SPSite(SiteCollection).OpenWeb();

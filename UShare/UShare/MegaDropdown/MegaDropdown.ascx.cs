@@ -48,7 +48,7 @@ namespace UShare.MegaDropdown
                     departmentsmenu += $"<section class='mega-content'  style='display:none' id='{ItemDiv.Title.Replace(" ", "")}'><div class='mega-category'>{ItemDiv.Title}</div><ul>";
                     foreach (SPListItem ItemDepart in Department)
                     {
-                        SPListItemCollection Units = Web.Lists[UnitsListName].GetItems(new SPQuery() { Query = Helper.UnitsQuery(ItemDiv.ID), ViewFields = Helper.UnitsViewField });
+                        SPListItemCollection Units = Web.Lists[UnitsListName].GetItems(new SPQuery() { Query = Helper.UnitsQuery(ItemDepart.ID), ViewFields = Helper.UnitsViewField });
                         SPFieldUrlValue UrlDepart = new SPFieldUrlValue(ItemDepart[Helper.DepartURL].ToString());
                         departmentsmenu += $"<li><a href='#' class='btnDeptNav' onclick='departmentBtn(\"depart_{UrlDepart.Description.Replace(" ", "")}\")'>{UrlDepart.Description}</a></li>";
                         unitsmenu += $"<section class='mega-content' style='display:none' id='depart_{UrlDepart.Description.Replace(" ", "")}'><div class='mega-category'><a href='{UrlDepart.Url}'>{UrlDepart.Description}</a></div><ul>";

@@ -55,7 +55,7 @@ namespace UTP.UpcomingEvents
                 ltrTitle.Text = PageTitle != null ? PageTitle : "";
                 ltrSubTitle.Text = PageSubTitle != null ? PageSubTitle : "";
                 string today = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now);
-                string q = $"<Where><Geq><FieldRef Name='Expires' /><Value IncludeTimeValue='TRUE' Type='DateTime'>{today}</Value></Geq></Where><OrderBy><FieldRef Name='Expires' Ascending='True' /></OrderBy>";
+                string q = $"<Where><Geq><FieldRef Name='Expires' /><Value IncludeTimeValue='TRUE' Type='DateTime'>{today}</Value></Geq></Where><OrderBy><FieldRef Name='EventDate' Ascending='True' /></OrderBy>";
                 //string query = @"<OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>";
                 SPWeb Web = new SPSite(SiteCollection).OpenWeb();
                 SPListItemCollection sPListItem = Web.Lists[ListName].GetItems(new SPQuery() { Query = q, RowLimit = uint.Parse(RowLimit.ToString()) });
@@ -77,7 +77,7 @@ namespace UTP.UpcomingEvents
 
                 foreach (SPListItem Item in sPListItem)
                 {
-                    DateTime date = DateTime.Parse(Item["Expires"].ToString());
+                    DateTime date = DateTime.Parse(Item["EventDate"].ToString());
                     stringBuilder.Append("<section class='sec-event-row'>");
                     stringBuilder.Append("<section class='sec-event-date'>");
                     stringBuilder.AppendFormat("<div class='day'>{0}</div>", date.ToString("dd"));

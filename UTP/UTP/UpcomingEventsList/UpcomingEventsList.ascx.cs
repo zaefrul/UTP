@@ -92,7 +92,7 @@ namespace UTP.UpcomingEventsList
         private string StructureBuilder(SPListItem Item)
         {
             string Output;
-            DateTime date = DateTime.Parse(Item["Expires"].ToString());
+            DateTime date = DateTime.Parse(Item["EventDate"].ToString());
             string URL = DetailPageUrl + "?event=" + Item.ID;
 
             Output = string.Format("<section class='sec-event-listing-row'>");
