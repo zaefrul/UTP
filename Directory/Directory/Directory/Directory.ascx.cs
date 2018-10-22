@@ -95,9 +95,9 @@ namespace Directory.Directory
                 SPQuery spQuery = new SPQuery() { Query = $"<Where><Eq><FieldRef Name='Title' /><Value Type='Text'>{item["Staff_x0020_No"].ToString()}</Value></Eq></Where>" };
                 SPListItemCollection qualifications = WebLists[QualificationsListName].GetItems(query);
                 SPListItemCollection specialization = WebLists[SpecializationListName].GetItems(spQuery);
-                SPListItemCollection research = WebLists[ResearchListName].GetItems(query);
-                SPListItemCollection publications = WebLists[PublicationsListName].GetItems(query);
-                SPListItemCollection workexp = WebLists[WorkingExperienceListName].GetItems(query);
+                SPListItemCollection research = WebLists[ResearchListName].GetItems(spQuery);
+                SPListItemCollection publications = WebLists[PublicationsListName].GetItems(spQuery);
+                SPListItemCollection workexp = WebLists[WorkingExperienceListName].GetItems(spQuery);
                 SPListItemCollection membership = WebLists[MembershipListName].GetItems(query);
                 SPListItemCollection teachingExp = WebLists[TeachingExpListName].GetItems(query);
                 SPListItemCollection recognition = WebLists[RecognitionListName].GetItems(query);
@@ -112,6 +112,7 @@ namespace Directory.Directory
                 string opt = "<section class='content'>";
                 opt += "<section class='row'>";
                 opt += "<section class='col-left'>Position</section>";
+                AcaPos = AcaPos.Contains("#") ? AcaPos.Split('#')[1] : AcaPos;
                 opt += $"<section class='col-right'>{AcaPos}</section>";
                 opt += "</section>";
 
@@ -127,6 +128,7 @@ namespace Directory.Directory
 
                 opt += "<section class='row'>";
                 opt += "<section class='col-left'>Nationality</section>";
+                citizen = citizen.Contains("#") ? citizen.Split('#')[1] : citizen;
                 opt += $"<section class='col-right'>{citizen}</section>";
                 opt += "</section>";
 
@@ -137,6 +139,7 @@ namespace Directory.Directory
 
                 opt += "<section class='row'>";
                 opt += "<section class='col-left'>Department</section>";
+                acaDepart = acaDepart.Contains("#") ? acaDepart.Split('#')[1] : acaDepart;
                 opt += $"<section class='col-right'>{acaDepart}</section>";
                 opt += "</section>";
 
@@ -169,8 +172,62 @@ namespace Directory.Directory
                     opt += "</section>";
                     opt += "</section>";
                 }
-
+                if(research != null && research.Count > 0)
+                {
+                    opt += "<section class='row'>";
+                    opt += "<section class='col-left'>Research</section>";
+                    opt += $"<section class='col-right'>";
+                    foreach (SPListItem qItem in research)
+                    {
+                        string text = qItem["Research_x0020_Title"] != null ? qItem["Research_x0020_Title"].ToString() : string.Empty;
+                        opt += $"<p>{text}</p>";
+                    }
+                    opt += "</section>";
+                    opt += "</section>";
+                }
                 opt += "</section>";
+                if (publications != null && publications.Count > 0)
+                {
+                    opt += "<section class='content'>";
+                    opt += "<section class='row'>";
+                    opt += "<section class='col-left'>Publications</section>";
+                    opt += $"<section class='col-right'>";
+                    foreach (SPListItem qItem in publications)
+                    {
+                        string text = qItem["Description"] != null ? qItem["Description"].ToString() : string.Empty;
+                        opt += $"<p>{text}</p>";
+                    }
+                    opt += "</section>";
+                    opt += "</section>";
+                    opt += "</section>";
+                }
+
+                if (workexp != null && workexp.Count > 0)
+                {
+                    opt += "<section class='content'>";
+                    opt += "<table class=\"table table-striped\">";
+                    opt += "<thead class=\"thead-dark\"><tr>";
+                    opt += "<th>No.</th>";
+                    opt += "<th>Position</th>";
+                    opt += "<th>From (Year) - To (Year)</th>";
+                    opt += "<th>Company Name</th></tr></thead>";
+                    int count = 0;
+                    foreach (SPListItem qItem in workexp)
+                    {
+                        opt += "<tr>";
+                        opt += $"<td>{++count}</td>";
+                        string text = qItem["Position"] != null ? qItem["Position"].ToString() : string.Empty;
+                        opt += $"<td>{text}</td>";
+                        string from = qItem["From_x0020__x0028_Year_x0029_"] != null ? qItem["From_x0020__x0028_Year_x0029_"].ToString() : string.Empty;
+                        string to = qItem["To_x0020__x0028_Year_x0029_"] != null ? qItem["To_x0020__x0028_Year_x0029_"].ToString() : string.Empty;
+                        opt += $"<td>{from} - {to}</td>";
+                        string company = qItem["pldr"] != null ? qItem["pldr"].ToString() : string.Empty;
+                        opt += $"<td>{company}</td>";
+                        opt += "</tr>";
+                    }
+                    opt += "</table>";
+                    opt += "</section>";
+                }
                 Details.Text = opt;
                 Details.Visible = true;
             }
@@ -248,15 +305,15 @@ namespace Directory.Directory
 
         private string GenerateTableResults(SPListItemCollection sp)
         {
-            string results = "<table>" 
-                + "<tr>"
-                    + "<td>No</td>"
-                    + "<td>Position</td>"
-                    + "<td>Name</td>"
-                    + "<td>Nationalty</td>"
-                    + "<td>Department</td>"
-                    + "<td>Area of Expertise</td>"
-                + "<tr>";
+            string results = "<table class=\"table table-striped\">"
+                + "<thead class=\"thead-dark\"><tr>"
+                      + "<th>No</td>"
+                    + "<th>Position</td>"
+                    + "<th>Name</td>"
+                    + "<th>Nationalty</td>"
+                    + "<th>Department</td>"
+                    + "<th>Area of Expertise</td>"
+                + "<tr></thead>";
             int counter = 0;
             foreach(SPListItem item in sp)
             {
@@ -267,9 +324,12 @@ namespace Directory.Directory
                 string expertise = item["Area_x0020_of_x0020_Expertise"] != null ? item["Area_x0020_of_x0020_Expertise"].ToString() : string.Empty;
                 results += "<tr>";
                 results += $"<td>{++counter}</td>";
+                AcaPos = AcaPos.Contains("#") ? AcaPos.Split('#')[1] : AcaPos;
                 results += $"<td>{AcaPos}</td>";
                 results += $"<td><a href='?persondetail={item["ID"].ToString()}'>{username}</a></td>";
+                citizen = citizen.Contains("#") ? citizen.Split('#')[1] : citizen;
                 results += $"<td>{citizen}</td>";
+                acaDepart = acaDepart.Contains("#") ? acaDepart.Split('#')[1] : acaDepart;
                 results += $"<td>{acaDepart}</td>";
                 results += $"<td>{expertise}</td>";
                 results += "</tr>";

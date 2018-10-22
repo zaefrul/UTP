@@ -7,63 +7,57 @@
 <%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Directory.ascx.cs" Inherits="Directory.Directory.Directory" %>
 
-<section class="form">
-    <section class="form-title">
-        Directory Search
-    </section>
-    <section class="form-row ">
-        <section class="form-label">
-            Name
-        </section>
-        <section class="form-field">
-            <asp:TextBox ID="Name" runat="server" CssClass="form-control"></asp:TextBox>
-        </section>
-    </section>
+<section class="directory-form">
 
-    <section class="form-row">
-        <section class="form-label">
-            Position
-        </section>
-        <section class="form-field">
-            <asp:DropDownList ID="Position" runat="server" CssClass="form-control">
-            </asp:DropDownList>
-        </section>
-    </section>
+    <div class="information">
+        <div class="icon"><i class="fas fa-user-tie"></i></div>
+        <div class="title">Lecturer Search</div>
+    </div>
 
-    <section class="form-row">
-        <section class="form-label">
-            Department
-        </section>
-        <section class="form-field">
-            <asp:DropDownList ID="Department" runat="server" CssClass="form-control">
-            </asp:DropDownList>
-        </section>
-    </section>
 
-    <section class="form-row">
-        <section class="form-label">
-            Nationality
-        </section>
-        <section class="form-field">
-            <asp:DropDownList ID="Nationality" runat="server" CssClass="form-control">
-            </asp:DropDownList>
-        </section>
-    </section>
+    <div class="form">
 
-    <section class="form-row">
-        <section class="form-label">
-            Area of Expertise
-        </section>
-        <section class="form-field">
-            <asp:TextBox ID="AOExperties" runat="server" CssClass="form-control"></asp:TextBox>
-        </section>
-    </section>
+        <div class="item-row">
+            <div class="item-input col6">
+                <label for="InputName">Name</label>
+                <asp:TextBox ID="Name" runat="server" CssClass="form-control" placeholder="Enter name"></asp:TextBox>
+            </div>
 
-    <section class="form-submit">
-        <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" CssClass="form-submit"  />
-    </section>
+            <div class="item-input col4">
+                <label for="InputArea">Area of Expertise</label>
+                <asp:TextBox ID="AOExperties" runat="server" CssClass="form-control" placeholder="Enter area of expertise"></asp:TextBox>
+            </div>
+        </div>
+
+
+        <div class="item-row">
+            <div class="item-input col3">
+                <label for="InputPos">Position</label>
+                <asp:DropDownList ID="Position" runat="server" CssClass="form-control">
+                </asp:DropDownList>
+            </div>
+
+            <div class="item-input col5">
+                <label for="InputDept">Department</label>
+                <asp:DropDownList ID="Department" runat="server" CssClass="form-control">
+                </asp:DropDownList>
+            </div>
+
+            <div class="item-input col2">
+                <label for="InputNat">Nationality</label>
+                <asp:DropDownList ID="Nationality" runat="server" CssClass="form-control">
+                </asp:DropDownList>
+            </div>
+        </div>
+        <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" CssClass="btn btn-primary" />
+    </div>
+
+
 </section>
 
 
-<asp:Literal ID="Results" runat="server" Visible="false"></asp:Literal>
-<asp:Literal ID="Details" runat="server" Visible="false"></asp:Literal>
+
+<section class="directory-result">
+    <asp:Literal ID="Results" runat="server" Visible="false"></asp:Literal>
+    <asp:Literal ID="Details" runat="server" Visible="false"></asp:Literal>
+</section>

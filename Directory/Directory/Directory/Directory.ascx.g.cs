@@ -45,6 +45,10 @@ namespace Directory.Directory {
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "15.0.0.0")]
+        protected global::System.Web.UI.WebControls.TextBox AOExperties;
+        
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "15.0.0.0")]
         protected global::System.Web.UI.WebControls.DropDownList Position;
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
@@ -54,10 +58,6 @@ namespace Directory.Directory {
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "15.0.0.0")]
         protected global::System.Web.UI.WebControls.DropDownList Nationality;
-        
-        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
-            "artCodeGenerator", "15.0.0.0")]
-        protected global::System.Web.UI.WebControls.TextBox AOExperties;
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "15.0.0.0")]
@@ -87,6 +87,21 @@ namespace Directory.Directory {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "Name";
             @__ctrl.CssClass = "form-control";
+            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("placeholder", "Enter name");
+            return @__ctrl;
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
+            "artCodeGenerator", "15.0.0.0")]
+        private global::System.Web.UI.WebControls.TextBox @__BuildControlAOExperties() {
+            global::System.Web.UI.WebControls.TextBox @__ctrl;
+            @__ctrl = new global::System.Web.UI.WebControls.TextBox();
+            this.AOExperties = @__ctrl;
+            @__ctrl.ApplyStyleSheetSkin(this.Page);
+            @__ctrl.ID = "AOExperties";
+            @__ctrl.CssClass = "form-control";
+            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("placeholder", "Enter area of expertise");
             return @__ctrl;
         }
         
@@ -132,19 +147,6 @@ namespace Directory.Directory {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
             "artCodeGenerator", "15.0.0.0")]
-        private global::System.Web.UI.WebControls.TextBox @__BuildControlAOExperties() {
-            global::System.Web.UI.WebControls.TextBox @__ctrl;
-            @__ctrl = new global::System.Web.UI.WebControls.TextBox();
-            this.AOExperties = @__ctrl;
-            @__ctrl.ApplyStyleSheetSkin(this.Page);
-            @__ctrl.ID = "AOExperties";
-            @__ctrl.CssClass = "form-control";
-            return @__ctrl;
-        }
-        
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
-            "artCodeGenerator", "15.0.0.0")]
         private global::System.Web.UI.WebControls.Button @__BuildControlbtnSearch() {
             global::System.Web.UI.WebControls.Button @__ctrl;
             @__ctrl = new global::System.Web.UI.WebControls.Button();
@@ -152,7 +154,7 @@ namespace Directory.Directory {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "btnSearch";
             @__ctrl.Text = "Search";
-            @__ctrl.CssClass = "form-submit";
+            @__ctrl.CssClass = "btn btn-primary";
             @__ctrl.Click -= new System.EventHandler(this.btnSearch_Click);
             @__ctrl.Click += new System.EventHandler(this.btnSearch_Click);
             return @__ctrl;
@@ -189,56 +191,57 @@ namespace Directory.Directory {
             System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
 
-<section class=""form"">
-    <section class=""form-title"">
-        Directory Search
-    </section>
-    <section class=""form-row "">
-        <section class=""form-label"">
-            Name
-        </section>
-        <section class=""form-field"">
-            "));
+<section class=""directory-form"">
+
+    <div class=""information"">
+        <div class=""icon""><i class=""fas fa-user-tie""></i></div>
+        <div class=""title"">Lecturer Search</div>
+    </div>
+
+
+    <div class=""form"">
+
+        <div class=""item-row"">
+            <div class=""item-input col6"">
+                <label for=""InputName"">Name</label>
+                "));
             global::System.Web.UI.WebControls.TextBox @__ctrl1;
             @__ctrl1 = this.@__BuildControlName();
             @__parser.AddParsedSubObject(@__ctrl1);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </section>\r\n    </section>\r\n\r\n    <section class=\"form-row\">\r\n        <" +
-                        "section class=\"form-label\">\r\n            Position\r\n        </section>\r\n        <" +
-                        "section class=\"form-field\">\r\n            "));
-            global::System.Web.UI.WebControls.DropDownList @__ctrl2;
-            @__ctrl2 = this.@__BuildControlPosition();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </div>\r\n\r\n            <div class=\"item-input col4\">\r\n              " +
+                        "  <label for=\"InputArea\">Area of Expertise</label>\r\n                "));
+            global::System.Web.UI.WebControls.TextBox @__ctrl2;
+            @__ctrl2 = this.@__BuildControlAOExperties();
             @__parser.AddParsedSubObject(@__ctrl2);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </section>\r\n    </section>\r\n\r\n    <section class=\"form-row\">\r\n        <" +
-                        "section class=\"form-label\">\r\n            Department\r\n        </section>\r\n       " +
-                        " <section class=\"form-field\">\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"item-row\">\r\n       " +
+                        "     <div class=\"item-input col3\">\r\n                <label for=\"InputPos\">Positi" +
+                        "on</label>\r\n                "));
             global::System.Web.UI.WebControls.DropDownList @__ctrl3;
-            @__ctrl3 = this.@__BuildControlDepartment();
+            @__ctrl3 = this.@__BuildControlPosition();
             @__parser.AddParsedSubObject(@__ctrl3);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </section>\r\n    </section>\r\n\r\n    <section class=\"form-row\">\r\n        <" +
-                        "section class=\"form-label\">\r\n            Nationality\r\n        </section>\r\n      " +
-                        "  <section class=\"form-field\">\r\n            "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </div>\r\n\r\n            <div class=\"item-input col5\">\r\n              " +
+                        "  <label for=\"InputDept\">Department</label>\r\n                "));
             global::System.Web.UI.WebControls.DropDownList @__ctrl4;
-            @__ctrl4 = this.@__BuildControlNationality();
+            @__ctrl4 = this.@__BuildControlDepartment();
             @__parser.AddParsedSubObject(@__ctrl4);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </section>\r\n    </section>\r\n\r\n    <section class=\"form-row\">\r\n        <" +
-                        "section class=\"form-label\">\r\n            Area of Expertise\r\n        </section>\r\n" +
-                        "        <section class=\"form-field\">\r\n            "));
-            global::System.Web.UI.WebControls.TextBox @__ctrl5;
-            @__ctrl5 = this.@__BuildControlAOExperties();
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </div>\r\n\r\n            <div class=\"item-input col2\">\r\n              " +
+                        "  <label for=\"InputNat\">Nationality</label>\r\n                "));
+            global::System.Web.UI.WebControls.DropDownList @__ctrl5;
+            @__ctrl5 = this.@__BuildControlNationality();
             @__parser.AddParsedSubObject(@__ctrl5);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n        </section>\r\n    </section>\r\n\r\n    <section class=\"form-submit\">\r\n      " +
-                        "  "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </div>\r\n        </div>\r\n        "));
             global::System.Web.UI.WebControls.Button @__ctrl6;
             @__ctrl6 = this.@__BuildControlbtnSearch();
             @__parser.AddParsedSubObject(@__ctrl6);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    </section>\r\n</section>\r\n\r\n\r\n"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    </div>\r\n\r\n\r\n</section>\r\n\r\n\r\n\r\n<section class=\"directory-result\">\r\n    "));
             global::System.Web.UI.WebControls.Literal @__ctrl7;
             @__ctrl7 = this.@__BuildControlResults();
             @__parser.AddParsedSubObject(@__ctrl7);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n"));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    "));
             global::System.Web.UI.WebControls.Literal @__ctrl8;
             @__ctrl8 = this.@__BuildControlDetails();
             @__parser.AddParsedSubObject(@__ctrl8);
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n</section>\r\n"));
         }
         
         [GeneratedCodeAttribute("Microsoft.VisualStudio.SharePoint.ProjectExtensions.CodeGenerators.SharePointWebP" +
