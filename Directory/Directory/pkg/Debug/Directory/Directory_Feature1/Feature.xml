@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="8a7fbb77-cbb0-451d-bca3-babf1dac0f3a" Scope="Site" Title="Directory Feature1">
+  <ElementManifests>
+    <ElementManifest Location="Directory\Elements.xml" />
+    <ElementFile Location="Directory\Directory.webpart" />
+  </ElementManifests>
+</Feature>
