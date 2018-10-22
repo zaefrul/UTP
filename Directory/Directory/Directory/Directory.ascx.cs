@@ -189,16 +189,18 @@ namespace Directory.Directory
                 if (publications != null && publications.Count > 0)
                 {
                     opt += "<section class='content'>";
-                    opt += "<section class='row'>";
-                    opt += "<section class='col-left'>Publications</section>";
-                    opt += $"<section class='col-right'>";
+                    opt += "<table class=\"table table-striped\">";
+                    opt += "<thead class=\"thead-dark\"><tr>";
+                    opt += "<th>No.</th>";
+                    opt += "<th>Title of Publication</th></tr></thead>";
+                    int count = 0;
                     foreach (SPListItem qItem in publications)
                     {
+                        opt += $"<tr><td>{++count}</td>";
                         string text = qItem["Description"] != null ? qItem["Description"].ToString() : string.Empty;
-                        opt += $"<p>{text}</p>";
+                        opt += $"<td>{text}</td></tr>";
                     }
-                    opt += "</section>";
-                    opt += "</section>";
+                    opt += "</table>";
                     opt += "</section>";
                 }
 
