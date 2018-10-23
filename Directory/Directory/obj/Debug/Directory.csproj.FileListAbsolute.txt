@@ -164,3 +164,4 @@ C:\Users\sql_admin\Documents\GitHub\UTP\Directory\Directory\obj\Debug\Directory.
 C:\Users\sql_admin\Documents\GitHub\UTP\Directory\Directory\obj\Debug\Directory.csproj.CopyComplete
 C:\Users\sql_admin\Documents\GitHub\UTP\Directory\Directory\obj\Debug\Directory.dll
 C:\Users\sql_admin\Documents\GitHub\UTP\Directory\Directory\obj\Debug\Directory.pdb
+C:\Users\sql_admin\Documents\GitHub\UTP\Directory\Directory\obj\Debug\Directory.csprojAssemblyReference.cache

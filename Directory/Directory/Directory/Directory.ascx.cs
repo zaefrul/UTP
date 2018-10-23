@@ -98,9 +98,9 @@ namespace Directory.Directory
                 SPListItemCollection research = WebLists[ResearchListName].GetItems(spQuery);
                 SPListItemCollection publications = WebLists[PublicationsListName].GetItems(spQuery);
                 SPListItemCollection workexp = WebLists[WorkingExperienceListName].GetItems(spQuery);
-                SPListItemCollection membership = WebLists[MembershipListName].GetItems(query);
-                SPListItemCollection teachingExp = WebLists[TeachingExpListName].GetItems(query);
-                SPListItemCollection recognition = WebLists[RecognitionListName].GetItems(query);
+                SPListItemCollection membership = WebLists[MembershipListName].GetItems(spQuery);
+                //SPListItemCollection teachingExp = WebLists[TeachingExpListName].GetItems(query);
+                SPListItemCollection recognition = WebLists[RecognitionListName].GetItems(spQuery);
                 string AcaPos = item["Academic_x0020_Position_x0020_2"] != null ? item["Academic_x0020_Position_x0020_2"].ToString() : string.Empty;
                 string username = item["Title"] != null ? item["Title"].ToString() : string.Empty;
                 string citizen = item["Citizenship_x0020_2"] != null ? item["Citizenship_x0020_2"].ToString() : string.Empty;
@@ -225,6 +225,83 @@ namespace Directory.Directory
                         opt += $"<td>{from} - {to}</td>";
                         string company = qItem["pldr"] != null ? qItem["pldr"].ToString() : string.Empty;
                         opt += $"<td>{company}</td>";
+                        opt += "</tr>";
+                    }
+                    opt += "</table>";
+                    opt += "</section>";
+                }
+
+                if(membership != null && membership.Count > 0)
+                {
+                    opt += "<section class='content'>";
+                    opt += "<table class=\"table table-striped\">";
+                    opt += "<thead class=\"thead-dark\"><tr>";
+                    opt += "<th>No.</th>";
+                    opt += "<th>Position</th>";
+                    opt += "<th>From (Year) - To (Year)</th>";
+                    opt += "<th>Professional Bodies / Association</th></tr></thead>";
+                    int count = 0;
+                    foreach (SPListItem qItem in membership)
+                    {
+                        opt += "<tr>";
+                        opt += $"<td>{++count}</td>";
+                        string text = qItem["Position"] != null ? qItem["Position"].ToString() : string.Empty;
+                        opt += $"<td>{text}</td>";
+                        string from = qItem["From_x0020__x0028_Year_x0029_"] != null ? qItem["From_x0020__x0028_Year_x0029_"].ToString() : string.Empty;
+                        string to = qItem["To_x0020__x0028_Year_x0029_"] != null ? qItem["To_x0020__x0028_Year_x0029_"].ToString() : string.Empty;
+                        opt += $"<td>{from} - {to}</td>";
+                        string pba = qItem["Profesional_x0020_Bodies_x002f_A"] != null ? qItem["Profesional_x0020_Bodies_x002f_A"].ToString() : string.Empty;
+                        opt += $"<td>{pba}</td>";
+                        opt += "</tr>";
+                    }
+                    opt += "</table>";
+                    opt += "</section>";
+                }
+
+                if(research != null && research.Count > 0)
+                {
+                    opt += "<section class='content'>";
+                    opt += "<table class=\"table table-striped\">";
+                    opt += "<thead class=\"thead-dark\"><tr>";
+                    opt += "<th>No.</th>";
+                    opt += "<th>Level of involvement</th>";
+                    opt += "<th>Research Title</th></tr></thead>";
+                    int count = 0;
+                    foreach (SPListItem qItem in research)
+                    {
+                        opt += "<tr>";
+                        opt += $"<td>{++count}</td>";
+                        string text = qItem["Level_x0020_of_x0020_Involvement"] != null ? qItem["Level_x0020_of_x0020_Involvement"].ToString() : string.Empty;
+                        opt += $"<td>{text}</td>";
+                        string pba = qItem["Research_x0020_Title"] != null ? qItem["Research_x0020_Title"].ToString() : string.Empty;
+                        opt += $"<td>{pba}</td>";
+                        opt += "</tr>";
+                    }
+                    opt += "</table>";
+                    opt += "</section>";
+                }
+                
+                if(recognition != null && recognition.Count > 0)
+                {
+                    opt += "<section class='content'>";
+                    opt += "<table class=\"table table-striped\">";
+                    opt += "<thead class=\"thead-dark\"><tr>";
+                    opt += "<th>No.</th>";
+                    opt += "<th>Recognition Title</th>";
+                    opt += "<th>From (Year) - To (Year)</th>";
+                    opt += "<th>Organizer / Bodies</th></tr></thead>";
+                    int count = 0;
+                    foreach (SPListItem qItem in recognition)
+                    {
+                        opt += "<tr>";
+                        opt += $"<td>{++count}</td>";
+                        string text = qItem["Recognition_x0020_Title"] != null ? qItem["Recognition_x0020_Title"].ToString() : string.Empty;
+                        opt += $"<td>{text}</td>";
+                        string from = qItem["From_x0020__x0028_Year_x0029_"] != null ? qItem["From_x0020__x0028_Year_x0029_"].ToString() : string.Empty;
+                        string to = qItem["To_x0020__x0028_Year_x0029_"] != null ? qItem["To_x0020__x0028_Year_x0029_"].ToString() : string.Empty;
+                        opt += $"<td>{from} - {to}</td>";
+                        string pba = qItem["Organiser_x002f_Bodies"] != null ? qItem["Organiser_x002f_Bodies"].ToString() : string.Empty;
+                        opt += $"<td>{pba}</td>";
                         opt += "</tr>";
                     }
                     opt += "</table>";
