@@ -59,23 +59,20 @@ namespace Directory.Directory
         {
             try
             {
+                SPListItemCollection Positions, Departments, National;
+                SPQuery query = new SPQuery()
+                {
+                    ViewXml = "<View><Query><OrderBy><FieldRef Name='Title' Ascending='True' /></OrderBy></Query><ViewFields><FieldRef Name='Title' /><FieldRef Name='ID' /></ViewFields><QueryOptions /></View>"
+                };
+                Positions = SPContext.Current.Web.Lists[ListPositionName].GetItems(query);
+                Departments = SPContext.Current.Web.Lists[ListDepartmentName].GetItems(query);
+                National = SPContext.Current.Web.Lists[ListNationalityName].GetItems(query);
+                Position = DropDownControlFactory(Position, Positions.GetDataTable(), "Title", "ID");
+                Department = DropDownControlFactory(Department, Departments.GetDataTable(), "Title", "ID");
+                Nationality = DropDownControlFactory(Nationality, National.GetDataTable(), "Title", "ID");
                 if (System.Web.HttpContext.Current.Request.Params["persondetail"] != null)
                 {
                     GetUserDetails(Int32.Parse(System.Web.HttpContext.Current.Request.Params["persondetail"]));
-                }
-                else
-                {
-                    SPListItemCollection Positions, Departments, National;
-                    SPQuery query = new SPQuery()
-                    {
-                        ViewXml = "<View><Query><OrderBy><FieldRef Name='Title' Ascending='True' /></OrderBy></Query><ViewFields><FieldRef Name='Title' /><FieldRef Name='ID' /></ViewFields><QueryOptions /></View>"
-                    };
-                    Positions = SPContext.Current.Web.Lists[ListPositionName].GetItems(query);
-                    Departments = SPContext.Current.Web.Lists[ListDepartmentName].GetItems(query);
-                    National = SPContext.Current.Web.Lists[ListNationalityName].GetItems(query);
-                    Position = DropDownControlFactory(Position, Positions.GetDataTable(), "Title", "ID");
-                    Department = DropDownControlFactory(Department, Departments.GetDataTable(), "Title", "ID");
-                    Nationality = DropDownControlFactory(Nationality, National.GetDataTable(), "Title", "ID");
                 }
             }
             catch (Exception ex)

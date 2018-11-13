@@ -3,5 +3,7 @@
   <ElementManifests>
     <ElementManifest Location="Directory\Elements.xml" />
     <ElementFile Location="Directory\Directory.webpart" />
+    <ElementManifest Location="ManagementSearch\Elements.xml" />
+    <ElementFile Location="ManagementSearch\ManagementSearch.webpart" />
   </ElementManifests>
 </Feature>

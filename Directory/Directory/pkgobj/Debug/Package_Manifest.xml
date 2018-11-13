@@ -4,6 +4,7 @@
     <Assembly Location="Directory.dll" DeploymentTarget="GlobalAssemblyCache">
       <SafeControls>
         <SafeControl Assembly="Directory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e74ddaf45447cda3" Namespace="Directory.Directory" TypeName="*" />
+        <SafeControl Assembly="Directory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e74ddaf45447cda3" Namespace="Directory.ManagementSearch" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>
