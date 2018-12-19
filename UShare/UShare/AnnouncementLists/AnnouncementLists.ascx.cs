@@ -49,7 +49,7 @@ namespace UShare.AnnouncementLists
                 string date = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now);
                 SPListItemCollection Announcements = Web.Lists[ListName].GetItems(new SPQuery()
                 {
-                    Query = $"<Where><Geq><FieldRef Name='Expires' /><Value IncludeTimeValue='TRUE' Type='DateTime'>{date}</Value></Geq></Where><OrderBy><FieldRef Name='Expires' Ascending='True' /></OrderBy>",
+                    Query = Helper.TLQuery,
                     RowLimit = uint.Parse(RowLimit.ToString())
                 });
                 int index = 0;

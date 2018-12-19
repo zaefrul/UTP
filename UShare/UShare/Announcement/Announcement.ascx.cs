@@ -54,7 +54,7 @@ namespace UShare.Announcement
                 StringBuilder stringBuilder = new StringBuilder();
                 foreach (SPListItem Item in sPListItem)
                 {
-                    DateTime Expires = DateTime.Parse(Item["Expires"].ToString());
+                    DateTime Expires = DateTime.Parse(Item["Created"].ToString());
                     stringBuilder.Append("<section class=\"sec-announcements-row\">");
                     stringBuilder.Append($"<section class=\"sec-announcements-date\"><div class=\"day\">{Expires.ToString("dd")}</div><div class=\"month\">{Expires.ToString("MMM")}</div></section>");
                     stringBuilder.Append("<section class='sec-announcements-name'>");

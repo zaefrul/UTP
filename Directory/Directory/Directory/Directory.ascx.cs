@@ -59,17 +59,20 @@ namespace Directory.Directory
         {
             try
             {
-                SPListItemCollection Positions, Departments, National;
-                SPQuery query = new SPQuery()
+                if(!Page.IsPostBack)
                 {
-                    ViewXml = "<View><Query><OrderBy><FieldRef Name='Title' Ascending='True' /></OrderBy></Query><ViewFields><FieldRef Name='Title' /><FieldRef Name='ID' /></ViewFields><QueryOptions /></View>"
-                };
-                Positions = SPContext.Current.Web.Lists[ListPositionName].GetItems(query);
-                Departments = SPContext.Current.Web.Lists[ListDepartmentName].GetItems(query);
-                National = SPContext.Current.Web.Lists[ListNationalityName].GetItems(query);
-                Position = DropDownControlFactory(Position, Positions.GetDataTable(), "Title", "ID");
-                Department = DropDownControlFactory(Department, Departments.GetDataTable(), "Title", "ID");
-                Nationality = DropDownControlFactory(Nationality, National.GetDataTable(), "Title", "ID");
+                    SPListItemCollection Positions, Departments, National;
+                    SPQuery query = new SPQuery()
+                    {
+                        ViewXml = "<View><Query><OrderBy><FieldRef Name='Title' Ascending='True' /></OrderBy></Query><ViewFields><FieldRef Name='Title' /><FieldRef Name='ID' /></ViewFields><QueryOptions /></View>"
+                    };
+                    Positions = SPContext.Current.Web.Lists[ListPositionName].GetItems(query);
+                    Departments = SPContext.Current.Web.Lists[ListDepartmentName].GetItems(query);
+                    National = SPContext.Current.Web.Lists[ListNationalityName].GetItems(query);
+                    Position = DropDownControlFactory(Position, Positions.GetDataTable(), "Title", "ID");
+                    Department = DropDownControlFactory(Department, Departments.GetDataTable(), "Title", "ID");
+                    Nationality = DropDownControlFactory(Nationality, National.GetDataTable(), "Title", "ID");
+                }
                 if (System.Web.HttpContext.Current.Request.Params["persondetail"] != null)
                 {
                     GetUserDetails(Int32.Parse(System.Web.HttpContext.Current.Request.Params["persondetail"]));
@@ -317,7 +320,7 @@ namespace Directory.Directory
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             Details.Visible = false;
-            Results.Text = GenerateTableResults(SearchStaff(Position.SelectedValue, Department.SelectedValue, Nationality.SelectedValue, Name.Text, AOExperties.Text));
+            Results.Text = GenerateTableResults(SearchStaff(Position.SelectedItem.Text, Department.SelectedItem.Text, Nationality.SelectedItem.Text, Name.Text, AOExperties.Text));
             Results.Visible = true;
         }
          
@@ -349,7 +352,7 @@ namespace Directory.Directory
             }
             if (position.Trim() != string.Empty)
             {
-                string sQuery = $"<Eq><FieldRef Name='Academic_x0020_Position_x0020_2' /><Value Type='Text'>{position}</Value></Eq>";
+                string sQuery = $"<Eq><FieldRef Name='Academic_x0020_Position_x0020_2' /><Value Type='Lookup'>{position}</Value></Eq>";
                 MQuery = $"<And>{MQuery}{sQuery}</And>";
             }
             else
@@ -359,12 +362,12 @@ namespace Directory.Directory
             }
             if (department.Trim() != string.Empty)
             {
-                string sQuery = $"<Eq><FieldRef Name='Academic_x0020_Department' /><Value Type='Text'><![CDATA[{department}]]></Value></Eq>";
+                string sQuery = $"<Eq><FieldRef Name='Academic_x0020_Department' /><Value Type='Lookup'>{department}</Value></Eq>";
                 MQuery = $"<And>{MQuery}{sQuery}</And>";
             }
             if (nationality.Trim() != string.Empty)
             {
-                string sQuery = $"<Eq><FieldRef Name='Citizenship_x0020_2' /><Value Type='Text'>{nationality}</Value></Eq>";
+                string sQuery = $"<Eq><FieldRef Name='Citizenship_x0020_2' /><Value Type='Lookup'>{nationality}</Value></Eq>";
                 MQuery = $"<And>{MQuery}{sQuery}</And>";
             }
             if (aoe.Trim() != string.Empty)

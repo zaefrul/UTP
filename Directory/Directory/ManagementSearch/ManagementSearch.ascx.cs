@@ -40,15 +40,18 @@ namespace Directory.ManagementSearch
             try
             {
                 Web = new SPSite(SiteCollection).OpenWeb();
-                SPListItemCollection Positions, Departments;
-                SPQuery query = new SPQuery()
+                if (!Page.IsPostBack)
                 {
-                    ViewXml = "<View><Query><OrderBy><FieldRef Name='Title' Ascending='True' /></OrderBy></Query><ViewFields><FieldRef Name='Title' /><FieldRef Name='ID' /></ViewFields><QueryOptions /></View>"
-                };
-                Positions = Web.Lists[MangementPosition].GetItems(query);
-                Departments = Web.Lists[MangementDepartment].GetItems(query);
-                Position = DropDownControlFactory(Position, Positions.GetDataTable(), "Title", "ID");
-                Department = DropDownControlFactory(Department, Departments.GetDataTable(), "Title", "ID");
+                    SPListItemCollection Positions, Departments;
+                    SPQuery query = new SPQuery()
+                    {
+                        ViewXml = "<View><Query><OrderBy><FieldRef Name='Title' Ascending='True' /></OrderBy></Query><ViewFields><FieldRef Name='Title' /><FieldRef Name='ID' /></ViewFields><QueryOptions /></View>"
+                    };
+                    Positions = Web.Lists[MangementPosition].GetItems(query);
+                    Departments = Web.Lists[MangementDepartment].GetItems(query);
+                    Position = DropDownControlFactory(Position, Positions.GetDataTable(), "Title", "ID");
+                    Department = DropDownControlFactory(Department, Departments.GetDataTable(), "Title", "ID");
+                }
                 if (System.Web.HttpContext.Current.Request.Params["persondetail"] != null)
                 {
                     GetUserDetails(Int32.Parse(System.Web.HttpContext.Current.Request.Params["persondetail"]));
@@ -79,7 +82,7 @@ namespace Directory.ManagementSearch
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             Details.Visible = false;
-            Results.Text = GenerateResultTable(searchStaff(Name.Text, Position.SelectedValue, Department.SelectedValue));
+            Results.Text = GenerateResultTable(searchStaff(Name.Text, Position.SelectedItem.Text, Department.SelectedItem.Text));
             Results.Visible = true;
         }
 
@@ -95,7 +98,7 @@ namespace Directory.ManagementSearch
             // Check for Position column
             if (position != "")
             {
-                var subQuery = $"<Eq><FieldRef Name='Management_x0020_Position_x0020_' /><Value Type='Text'>{position}</Value></Eq>";
+                var subQuery = $"<Eq><FieldRef Name='Management_x0020_Position_x0020_' /><Value Type='Lookup'>{position}</Value></Eq>";
                 myQuery = $"<And>{myQuery}{subQuery}</And>";
             }
             else
@@ -106,7 +109,7 @@ namespace Directory.ManagementSearch
             // Check for Department column
             if (department != "")
             {
-                var subQuery = $"<Eq><FieldRef Name='Management_x0020_Department' /><Value Type='Text'><![CDATA[{department}]]></Value></Eq>";
+                var subQuery = $"<Eq><FieldRef Name='Management_x0020_Department' /><Value Type='Lookup'>{department}</Value></Eq>";
                 myQuery = $"<And>{myQuery}{subQuery}</And>";
             }
 
