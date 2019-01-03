@@ -49,7 +49,8 @@ namespace UShare.HRMattersList
                 //    Query = "",
                 //    RowLimit = 9
                 //};
-                SPListItemCollection HRItems = Web.Lists[ListName].GetItems(Helper.TLQuery);
+                SPQuery query = new SPQuery() { Query = Helper.TLQuery, ViewFields = @"<FieldRef Name='Title' /><FieldRef Name='ID' /><FieldRef Name='Created' />" };
+                SPListItemCollection HRItems = Web.Lists[ListName].GetItems(query);
                 var Page = HttpContext.Current.Request.Params["page"];
                 StringBuilder sb = new StringBuilder();
                 int index = 0;
@@ -88,7 +89,7 @@ namespace UShare.HRMattersList
         private string HtmlFactory(SPListItem Item)
         {
             string section = "";
-            DateTime Expires = DateTime.Parse(Item["Expires"].ToString());
+            DateTime Expires = DateTime.Parse(Item["Created"].ToString());
             section += "<section class=\"sec-hrmatters-list-row\">";
             section += "<section class=\"sec-hrmatters-list-date\">";
             section += "<div class=\"month\">"+ Expires.ToString("MMMM") + "</div>";
@@ -96,7 +97,7 @@ namespace UShare.HRMattersList
             section += "<div class=\"year\">"+ Expires.ToString("yyyy") + "</div>";
             section += "</section>";
             section += "<section class=\"sec-hrmatters-list-name\">";
-            section += "<a href=\""+ DetailPageUrl + "?hrid="+Item.ID+"\" class=\"\">"+Item["Title"].ToString()+"</a>";
+            section += $"<a href='{string.Format("{0}?hrid={1}", DetailPageUrl, Item["ID"])}' class=''>{Item["Title"].ToString()}</a>";
             section += "</section>";
             section += "</section>";
             return section;

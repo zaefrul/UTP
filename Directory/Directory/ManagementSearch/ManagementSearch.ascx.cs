@@ -113,7 +113,7 @@ namespace Directory.ManagementSearch
                 myQuery = $"<And>{myQuery}{subQuery}</And>";
             }
 
-            myQuery = $"<Where>{myQuery}</Where><OrderBy><FieldRef Name='Management_x0020_Position_x0020_' Ascending='True' /><FieldRef Name='Title' Ascending='True' /></OrderBy>";
+            myQuery = $"<Where>{myQuery}</Where><OrderBy><FieldRef Name='Management_x0020_Position_x003a_' Ascending='True' /><FieldRef Name='Title' Ascending='True' /></OrderBy>";
 
             var sViewFields = "<FieldRef Name='Title' /><FieldRef Name='Management_x0020_Position_x0020_' /><FieldRef Name='Management_x0020_Department' /><FieldRef Name='Username' /><FieldRef Name='Ext' /><FieldRef Name='Email' /><FieldRef Name='Block' /><FieldRef Name='Unit' />";
 
@@ -149,9 +149,10 @@ namespace Directory.ManagementSearch
                 string Phone = Item["Ext"] != null ? Item["Ext"].ToString() : string.Empty;
                 results += "<tr>";
                 results += $"<td>{++counter}</td>";
-                results += $"<td>{name}</td>";
+                
                 string pos = position.Contains("#") ? position.Split('#')[1] : position;
                 results += $"<td>{pos}</td>";
+                results += $"<td>{name}</td>";
                 string dep = Department.Contains("#") ? Department.Split('#')[1] : Department;
                 results += $"<td>{dep}</td>";
                 results += $"<td>{Unit}</td>";

@@ -375,7 +375,7 @@ namespace Directory.Directory
                 string sQuery = $"<Contains><FieldRef Name='Area_x0020_of_x0020_Expertise' /><Value Type='Text'>{aoe}</Value></Contains>";
                 MQuery = $"<And>{MQuery}{sQuery}</And>";
             }
-            string FQuery = $"<Where>{MQuery}</Where><OrderBy><FieldRef Name='Academic_x0020_Position_x0020_2' Ascending='True' /><FieldRef Name='Name' Ascending='True' /></OrderBy>";
+            string FQuery = $"<Where>{MQuery}</Where><OrderBy><FieldRef Name='Academic_x0020_Position_x003a_Se' Ascending='True' /><FieldRef Name='Name' Ascending='True' /></OrderBy>";
             string ViewField = @"<FieldRef Name='Title' /><FieldRef Name='Academic_x0020_Department' /><FieldRef Name='Academic_x0020_Position_x0020_2' /><FieldRef Name='Area_x0020_of_x0020_Expertise' /><FieldRef Name='Citizenship_x0020_2' /><FieldRef Name='Status' />";
 
 

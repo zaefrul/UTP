@@ -52,7 +52,12 @@ namespace UShare.HSEnvLists
                 }
                 int loopbreaker = index + RowLimit;
                 string query = @"<OrderBy><FieldRef Name='Created' Ascending='False' /></OrderBy>";
-                SPListItemCollection HSEItems = Web.Lists[ListName].GetItems(query);
+                SPQuery Query = new SPQuery()
+                {
+                    Query = query,
+                    ViewFields = @"<FieldRef Name='Title' /><FieldRef Name='Image' /><FieldRef Name='ID' /><FieldRef Name='Expires' />"
+                };
+                SPListItemCollection HSEItems = Web.Lists[ListName].GetItems(Query);
                 for (int i = index; i < loopbreaker; i++)
                 {
                     if (i >= HSEItems.Count)
@@ -74,7 +79,7 @@ namespace UShare.HSEnvLists
                 }
                 Paginated.Text = POutput;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 HSERow.Text = ex.Message;
             }
@@ -88,11 +93,11 @@ namespace UShare.HSEnvLists
             string ImageUrl = Item["Image"] != null ? (new SPFieldUrlValue(Item["Image"].ToString())).Url : Helper.NoImageURL;
             DateTime Expires = DateTime.Parse(Item["Expires"].ToString());
             structure += "<section class=\"sec-hse-list-row\">";
-            structure += "<section class=\"sec-hse-list-image\" style=\"background-image:url("+ ImageUrl + ")\">";
+            structure += "<section class=\"sec-hse-list-image\" style=\"background-image:url(" + ImageUrl + ")\">";
             structure += "</section>";
-            structure += "<section class=\"sec-hse-list-date\"><i class=\"far fa-calendar-alt\"></i>"+ Expires.ToString("dd MMMM yyyy") + "</section>";
+            structure += "<section class=\"sec-hse-list-date\"><i class=\"far fa-calendar-alt\"></i>" + Expires.ToString("dd MMMM yyyy") + "</section>";
             structure += "<section class=\"sec-hse-list-name\">";
-            structure += "<a href=\""+ DetailPageUrl + "?hseid="+Item.ID+"\" class=\"\">"+Item["Title"].ToString()+"</a>";
+            structure += "<a href=\"" + DetailPageUrl + "?hseid=" + Item.ID + "\" class=\"\">" + Item["Title"].ToString() + "</a>";
             structure += "</section>";
             structure += "</section>";
             return structure;

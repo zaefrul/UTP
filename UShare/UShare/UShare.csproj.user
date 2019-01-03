@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SharePointSiteUrl>http://sp-dev-zen:2755/ushare/</SharePointSiteUrl>
-    <PublishToFileSystemTargetLocation>C:\Temp</PublishToFileSystemTargetLocation>
+    <PublishToFileSystemTargetLocation>\\sp-apps1\c%24\ZEN</PublishToFileSystemTargetLocation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
