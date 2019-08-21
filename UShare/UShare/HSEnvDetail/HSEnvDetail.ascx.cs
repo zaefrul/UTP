@@ -15,6 +15,8 @@ namespace UShare.HSEnvDetail
         // for production. Because the SecurityPermission attribute bypasses the security check for callers of
         // your constructor, it's not recommended for production purposes.
         // [System.Security.Permissions.SecurityPermission(System.Security.Permissions.SecurityAction.Assert, UnmanagedCode = true)]
+        [WebBrowsable(true), WebDisplayName("Component Title"), WebDescription("Component Title"), Personalizable(PersonalizationScope.Shared)]
+        public string ComponentTitle { get; set; }
         [WebBrowsable(true), WebDisplayName("List Name"), WebDescription("List Name"), Personalizable(PersonalizationScope.Shared)]
         public string ListName { get; set; }
         [WebBrowsable(true), WebDisplayName("List Item URL"), WebDescription("Item Detail URL"), Personalizable(PersonalizationScope.Shared)]
@@ -35,6 +37,9 @@ namespace UShare.HSEnvDetail
         {
             try
             {
+
+                WPTitle.Text = ComponentTitle;
+
                 var HRid = HttpContext.Current.Request.Params["hseid"];
                 int ID = 0;
                 if (HRid != null && !Int32.TryParse(HRid, out ID))

@@ -24,8 +24,8 @@
             </div>
 
             <div class="item-input col4">
-                <label for="InputArea">Area of Expertise</label>
-                <asp:TextBox ID="AOExperties" runat="server" CssClass="form-control" placeholder="Enter area of expertise"></asp:TextBox>
+                <label for="InputArea">Specialization</label>
+                <asp:TextBox ID="AOExperties" runat="server" CssClass="form-control" placeholder=""></asp:TextBox>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
 
 
 
-<section class="directory-result">
+<section class="directory-result" style="padding: 30px 0px;">
     <asp:Literal ID="Results" runat="server" Visible="false"></asp:Literal>
     <asp:Literal ID="Details" runat="server" Visible="false"></asp:Literal>
 </section>

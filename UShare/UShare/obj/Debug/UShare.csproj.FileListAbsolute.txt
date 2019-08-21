@@ -241,8 +241,8 @@ C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\bin\Debug\ko\System.Spatia
 C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\bin\Debug\ru\System.Spatial.resources.dll
 C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\bin\Debug\zh-Hans\System.Spatial.resources.dll
 C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\bin\Debug\zh-Hant\System.Spatial.resources.dll
-C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\obj\Debug\UShare.csprojAssemblyReference.cache
 C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\obj\Debug\UShare.csproj.CoreCompileInputs.cache
 C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\obj\Debug\UShare.csproj.CopyComplete
 C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\obj\Debug\UShare.dll
 C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\obj\Debug\UShare.pdb
+C:\Users\sql_admin\Documents\GitHub\UTP\UShare\UShare\obj\Debug\UShare.csprojAssemblyReference.cache

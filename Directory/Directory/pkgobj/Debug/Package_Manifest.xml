@@ -5,9 +5,13 @@
       <SafeControls>
         <SafeControl Assembly="Directory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e74ddaf45447cda3" Namespace="Directory.Directory" TypeName="*" />
         <SafeControl Assembly="Directory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e74ddaf45447cda3" Namespace="Directory.ManagementSearch" TypeName="*" />
+        <SafeControl Assembly="Directory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e74ddaf45447cda3" Namespace="Directory.Administration" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\Directory\directoryForm.css" />
+  </TemplateFiles>
   <FeatureManifests>
     <FeatureManifest Location="Directory_Feature1\Feature.xml" />
   </FeatureManifests>

@@ -49,8 +49,8 @@ namespace UShare.AnnouncementLists
                 string date = SPUtility.CreateISO8601DateTimeFromSystemDateTime(DateTime.Now);
                 SPListItemCollection Announcements = Web.Lists[ListName].GetItems(new SPQuery()
                 {
-                    Query = Helper.TLQuery,
-                    RowLimit = uint.Parse(RowLimit.ToString())
+                    Query = Helper.TLQuery
+                    //RowLimit = uint.Parse(RowLimit.ToString())
                 });
                 int index = 0;
                 var Page = HttpContext.Current.Request.Params["page"] != null ? HttpContext.Current.Request.Params["page"].Trim() != "1" ? HttpContext.Current.Request.Params["page"].Trim() : "" : "";

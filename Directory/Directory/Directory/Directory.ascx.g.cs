@@ -101,7 +101,7 @@ namespace Directory.Directory {
             @__ctrl.ApplyStyleSheetSkin(this.Page);
             @__ctrl.ID = "AOExperties";
             @__ctrl.CssClass = "form-control";
-            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("placeholder", "Enter area of expertise");
+            ((System.Web.UI.IAttributeAccessor)(@__ctrl)).SetAttribute("placeholder", "");
             return @__ctrl;
         }
         
@@ -209,7 +209,7 @@ namespace Directory.Directory {
             @__ctrl1 = this.@__BuildControlName();
             @__parser.AddParsedSubObject(@__ctrl1);
             @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n            </div>\r\n\r\n            <div class=\"item-input col4\">\r\n              " +
-                        "  <label for=\"InputArea\">Area of Expertise</label>\r\n                "));
+                        "  <label for=\"InputArea\">Specialization</label>\r\n                "));
             global::System.Web.UI.WebControls.TextBox @__ctrl2;
             @__ctrl2 = this.@__BuildControlAOExperties();
             @__parser.AddParsedSubObject(@__ctrl2);
@@ -233,7 +233,8 @@ namespace Directory.Directory {
             global::System.Web.UI.WebControls.Button @__ctrl6;
             @__ctrl6 = this.@__BuildControlbtnSearch();
             @__parser.AddParsedSubObject(@__ctrl6);
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    </div>\r\n\r\n\r\n</section>\r\n\r\n\r\n\r\n<section class=\"directory-result\">\r\n    "));
+            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl("\r\n    </div>\r\n\r\n\r\n</section>\r\n\r\n\r\n\r\n<section class=\"directory-result\" style=\"padd" +
+                        "ing: 30px 0px;\">\r\n    "));
             global::System.Web.UI.WebControls.Literal @__ctrl7;
             @__ctrl7 = this.@__BuildControlResults();
             @__parser.AddParsedSubObject(@__ctrl7);

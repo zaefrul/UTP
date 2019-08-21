@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="8a7fbb77-cbb0-451d-bca3-babf1dac0f3a" Scope="Site" Title="Directory Feature1">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="Directory Feature1" Id="8a7fbb77-cbb0-451d-bca3-babf1dac0f3a" Scope="Site">
   <ElementManifests>
     <ElementManifest Location="Directory\Elements.xml" />
     <ElementFile Location="Directory\Directory.webpart" />
     <ElementManifest Location="ManagementSearch\Elements.xml" />
     <ElementFile Location="ManagementSearch\ManagementSearch.webpart" />
+    <ElementManifest Location="Administration\Elements.xml" />
+    <ElementFile Location="Administration\Administration.webpart" />
   </ElementManifests>
 </Feature>

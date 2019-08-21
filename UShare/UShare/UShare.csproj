@@ -114,11 +114,6 @@
     <Compile Include="HSEnvDetail\HSEnvDetail.ascx.cs">
       <DependentUpon>HSEnvDetail.ascx</DependentUpon>
     </Compile>
-    <Compile Include="HSEnvDetail\HSEnvDetail.ascx.g.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HSEnvDetail.ascx</DependentUpon>
-    </Compile>
     <Compile Include="HSEnvLists\HSEnvLists.ascx.cs">
       <DependentUpon>HSEnvLists.ascx</DependentUpon>
     </Compile>
@@ -295,7 +290,6 @@
     <Content Include="HSEnvDetail\Elements.xml" />
     <Content Include="HSEnvDetail\HSEnvDetail.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>
-      <LastGenOutput>HSEnvDetail.ascx.g.cs</LastGenOutput>
     </Content>
     <Content Include="HSEnvLists\Elements.xml" />
     <Content Include="HSEnvLists\HSEnvLists.ascx">

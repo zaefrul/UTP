@@ -54,6 +54,14 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\Administration.ascx.cs">
+      <DependentUpon>Administration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Administration.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Administration.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Directory\Directory.ascx.cs">
       <DependentUpon>Directory.ascx</DependentUpon>
     </Compile>
@@ -73,6 +81,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Administration\Administration.webpart" />
+    <None Include="Administration\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d1a318fd-5e46-44f2-ba33-b04cd3053cde}</SharePointProjectItemId>
+    </None>
     <None Include="Directory\Directory.webpart" />
     <None Include="Directory\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{082d0c10-d357-4097-9d32-7758a76db13f}</SharePointProjectItemId>
@@ -81,6 +93,9 @@
       <FeatureId>{d3a88962-2521-4dec-b9f4-6ee0b7844961}</FeatureId>
     </None>
     <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{376e7b57-3a44-4c0d-a735-f62987e11e12}</SharePointProjectItemId>
+    </None>
     <None Include="ManagementSearch\ManagementSearch.webpart" />
     <None Include="ManagementSearch\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{d331da06-2db3-4ec0-bc80-ae172eb0648f}</SharePointProjectItemId>
@@ -94,6 +109,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Administration\Administration.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Administration.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Administration\Elements.xml" />
     <Content Include="Directory\Directory.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>
       <LastGenOutput>Directory.ascx.g.cs</LastGenOutput>
@@ -102,6 +122,7 @@
     <Content Include="Features\Feature1\Feature1.Template.xml">
       <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
+    <Content Include="Layouts\Directory\directoryForm.css" />
     <Content Include="ManagementSearch\Elements.xml" />
     <Content Include="ManagementSearch\ManagementSearch.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>

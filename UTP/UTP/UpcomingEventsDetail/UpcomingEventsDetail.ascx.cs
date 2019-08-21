@@ -51,7 +51,7 @@ namespace UTP.UpcomingEventsDetail
                 ltrTitle.Text = PageTitle;
                 ltrName.Text = Item["Title"] != null ? Item["Title"].ToString() : "";
                 ltrLocation.Text = Item["Location"] != null ? Item["Location"].ToString() : "";
-                ltrDay.Text = EventDate.ToString("dd") + " ~ " + Expires.ToString("dd");
+                ltrDay.Text = EventDate.ToString("dd") /* + " ~ " + Expires.ToString("dd")*/; //Commented on 24 July 2019 (Requested by Corporate Unit)
                 ltrMonth.Text = EventDate.ToString("MMM");
                 ltrTime.Text = EventDate.ToString("hh:mm tt");
                 ltrBody.Text = Item["Body"] != null ? Item["Body"].ToString() : "";
